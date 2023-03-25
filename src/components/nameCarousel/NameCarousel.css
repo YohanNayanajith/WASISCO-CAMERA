@@ -1,0 +1,12 @@
+.name-carousel {
+  color: var(--white);
+  /* padding-bottom: 100px; */
+}
+
+/* mobile view */
+
+@media (max-width: 450px) {
+  .name-carousel {
+    /* padding-bottom: 80px; */
+  }
+}

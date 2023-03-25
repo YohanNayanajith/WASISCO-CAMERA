@@ -14,7 +14,7 @@ const MainSectionHeader = () => {
         height: "100%",
       }}
     >
-      {/* <div className="main-section-animation"></div> */}
+      <div className="main-section-animation"></div>
       <div className="main-section-header-container">
         <div className="main-section-header">
           Advanced Team ®<br /> Digital Design <br />

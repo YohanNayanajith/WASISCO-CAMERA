@@ -1,23 +1,31 @@
-/* .main-section-animation {
-  position: absolute;
-  width: 820.69px;
-  height: 801px;
-  left: 947px;
-  top: -376px;
-
-  background: radial-gradient(
-      47.62% 47.62% at 50.07% 52.38%,
-      #912e8e 0%,
-      rgba(129, 0, 127, 0.1) 100%
-    )
-} */
-
 .main-section-header-container {
   display: flex;
   flex-direction: column;
   padding: 100px 0 20px;
   font-family: "Montserrat";
   position: relative;
+
+  background: hsla(0, 0%, 0%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(0, 0%, 0%, 1) 83%,
+    hsla(302, 52%, 37%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(0, 0%, 0%, 1) 83%,
+    hsla(302, 52%, 37%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(0, 0%, 0%, 1) 83%,
+    hsla(302, 52%, 37%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#912E8E", GradientType=1 );
 }
 .main-section-header {
   font-style: normal;

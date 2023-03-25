@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import MainSection from "./mainSection/MainSection";
 import VideoPlayer from "./videoPlayer/VideoPlayer";
+import ContactService from "./contactService/ContactService";
+import NameCarousel from "./nameCarousel/NameCarousel";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -31,7 +33,9 @@ const Home = () => {
         contactClick={() => scrollToDiv(contact)}
       />
 
-      <VideoPlayer />
+      {/* <VideoPlayer /> */}
+      <NameCarousel active={true} />
+      <ContactService />
     </div>
   );
 };
