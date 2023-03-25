@@ -4,13 +4,25 @@ import Typewriter from "typewriter-effect";
 
 const MainSectionHeader = () => {
   return (
-    <section className="background-main-color-with-height" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} >
+    <section
+      className="background-main-color-with-height"
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      {/* <div className="main-section-animation"></div> */}
       <div className="main-section-header-container">
         <div className="main-section-header">
-          Advanced Team ®<br/> Digital Design <br/>Boutique with Focus <br/>on Aesthetics
+          Advanced Team ®<br /> Digital Design <br />
+          Boutique with Focus <br />
+          on Aesthetics
         </div>
         <div className="main-section-header-button">
-            <a href="#">Learn More</a>
+          <a href="#">Learn More</a>
         </div>
         <div className="main-section-header-description">
           <div className="main-section-header-content">

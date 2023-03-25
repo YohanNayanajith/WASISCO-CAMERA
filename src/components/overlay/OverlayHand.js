@@ -8,7 +8,7 @@ const OverlayHand = () => {
     <div
       style={{
         position: "absolute",
-        top: "50%",
+        top: "60%",
         left: "50%",
         transform: "translate(-50%, -50%)",
         zIndex: 9999,
