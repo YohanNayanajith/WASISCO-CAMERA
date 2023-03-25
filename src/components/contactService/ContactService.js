@@ -11,7 +11,6 @@ const ContactService = () => {
         position: "relative",
         height: "100vh",
         width: "100vw",
-        backgroundColor: "orange",
       }}
       id="container"
       touch-action="none"

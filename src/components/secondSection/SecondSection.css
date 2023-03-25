@@ -81,7 +81,7 @@
   .second-section-container-content {
     flex: 90%;
   }
-  ..second-section-container-image {
+  .second-section-container-image {
     flex: 10%;
   }
 }

@@ -4,6 +4,7 @@ import VideoPlayer from "./videoPlayer/VideoPlayer";
 import ContactService from "./contactService/ContactService";
 import NameCarousel from "./nameCarousel/NameCarousel";
 import SecondSection from "./secondSection/SecondSection";
+import Services from "./services/Services";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -37,6 +38,7 @@ const Home = () => {
       {/* <VideoPlayer /> */}
       <NameCarousel active={true} />
       <SecondSection reference={secondSection} active={true} />
+      <Services />
       <ContactService />
     </div>
   );
