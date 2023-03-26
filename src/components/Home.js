@@ -5,6 +5,7 @@ import ContactService from "./contactService/ContactService";
 import NameCarousel from "./nameCarousel/NameCarousel";
 import SecondSection from "./secondSection/SecondSection";
 import Services from "./services/Services";
+import CardCarousel from "./cardCarousel/CardCarousel";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -39,7 +40,10 @@ const Home = () => {
       <NameCarousel active={true} />
       <SecondSection reference={secondSection} active={true} />
       <Services />
+      <SecondSection reference={secondSection} active={true} />
+      <CardCarousel />
       <ContactService />
+      
     </div>
   );
 };

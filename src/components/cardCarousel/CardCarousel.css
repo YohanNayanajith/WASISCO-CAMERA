@@ -1,0 +1,26 @@
+.card-carousel-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  padding: 0 60px;
+}
+
+.card-carousel-header {
+  font-size: 44px;
+  line-height: 54px;
+  padding: 10px 0;
+  /* identical to box height */
+
+  letter-spacing: 0.09em;
+
+  color: #faf4fe;
+}
+.card-carousel-number {
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.09em;
+
+  color: #c3c1c3;
+}
