@@ -21,14 +21,14 @@
   width: 65%;
 }
 .about-half-full-ball-image img{
-  width: 80%;
+  width: 100%;
 }
 
 @media (max-width: 1400px) {
   .about-content {
     font-size: 40px;
     line-height: 55px;
-    padding: 50px 100px;
+    /* padding: 50px 200px; */
   }
   .about-full-ball-image img{
     width: 80%;
@@ -47,6 +47,6 @@
     width: 90%;
   }
   .about-half-full-ball-image img{
-    width: 90%;
+    width: 80%;
   }
 }

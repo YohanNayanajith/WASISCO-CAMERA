@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./About.css";
+import { isTablet } from "react-device-detect";
 
 const About = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
   console.log(width);
   console.log(height);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }, [window.innerWidth, window.innerHeight]);
   return (
     <div className="about-container">
       {/* full ball */}
@@ -13,8 +18,8 @@ const About = () => {
         className="about-full-ball-image"
         style={{
           position: "absolute",
-          top: (height * 2) / 6,
-          left: width * 2.5,
+          top: height / 4,
+          left: (width / 2) * 1.5,
         }}
       >
         <img
