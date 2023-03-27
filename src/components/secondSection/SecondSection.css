@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: space-evenly;
   /* padding: 20px 100px 50px; */
-  padding-top: 70px;
+  padding: 70px 0;
   gap: 100px;
   /* background-color: blue; */
 }

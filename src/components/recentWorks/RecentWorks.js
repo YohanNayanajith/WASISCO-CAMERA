@@ -38,14 +38,10 @@ const RecentWorks = () => {
 
   const getParticularImage = (imageUrl) => {
     return (
-      <motion.div
-        className="recent-work-left"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <div className="recent-work-left-image">
-          <img src={imageUrl} alt="recent-work" />
-        </div>
+      <motion.div className="recent-work-left" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <div className="recent-work-left-image">
+            <img src={imageUrl} alt="recent-work" />
+          </div>
       </motion.div>
     );
   };

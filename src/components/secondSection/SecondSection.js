@@ -90,7 +90,7 @@ const SecondSection = ({ reference, active }) => {
           )}
         </div>
       ) : (
-        <section ref={reference} className="background-main-color">
+        <div ref={reference} className="background-main-color">
           {active ? (
             <div className="second-section">
               {titleSection()}
@@ -99,7 +99,7 @@ const SecondSection = ({ reference, active }) => {
           ) : (
             <div className="second-section">{imageSection()}</div>
           )}
-        </section>
+        </div>
       )}
     </>
   );

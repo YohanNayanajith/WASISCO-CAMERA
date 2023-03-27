@@ -11,6 +11,7 @@ import HandShake from "./handShake/HandShake";
 import GetInTouch from "./getInTouch/GetInTouch";
 import Footer from "./footer/Footer";
 import AboutUs from "./aboutUs/AboutUs";
+import Blogs from "./blogs/Blogs";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -43,6 +44,7 @@ const Home = () => {
 
       {/* <VideoPlayer /> */}
       <NameCarousel active={true} />
+      <VideoPlayer />
       <SecondSection reference={secondSection} active={true} />
       <Services />
       <SecondSection reference={secondSection} active={true} />
@@ -50,7 +52,7 @@ const Home = () => {
       <RecentWorksService />
       <NameCarousel active={false} />
       <HandShake />
-
+      <Blogs />
       <AboutUs />
       {/* our team */}
 
