@@ -52,6 +52,9 @@ const Home = () => {
       <HandShake />
 
       <AboutUs />
+      {/* our team */}
+
+      <SecondSection reference={secondSection} active={false} />
       <ContactService />
 
       <GetInTouch />

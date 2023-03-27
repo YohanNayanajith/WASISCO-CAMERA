@@ -1,6 +1,22 @@
 import React from "react";
 import "./SecondSection.css";
 import { isMobile } from "react-device-detect";
+import { motion } from "framer-motion";
+
+const draw = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: (i) => {
+    const delay = 1 + i * 0.5;
+    return {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+        opacity: { delay, duration: 0.01 },
+      },
+    };
+  },
+};
 
 const SecondSection = ({ reference, active }) => {
   const imageSection = () => {
@@ -23,6 +39,25 @@ const SecondSection = ({ reference, active }) => {
             With our experience in Product Designing, we solve product problems
             and build appealing usable web experiences.
           </div>
+          {/* <motion.div>
+            <motion.svg
+              width="600"
+              height="600"
+              viewBox="0 0 600 600"
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.line
+                x1="220"
+                y1="30"
+                x2="360"
+                y2="30"
+                stroke="#ffffff"
+                variants={draw}
+                custom={2}
+              />
+            </motion.svg>
+          </motion.div> */}
         </div>
       </div>
     );
