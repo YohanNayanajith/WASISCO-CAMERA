@@ -50,7 +50,7 @@ const NameCarousel = ({ active }) => {
           {/* </div> */}
         </section>
       ) : (
-        <section>
+        <div style={{ padding: "50px 0"}} className="background-main-color">
           <Marquee
             gradient={false}
             speed={100}
@@ -68,7 +68,7 @@ const NameCarousel = ({ active }) => {
               </h1>
             ))}
           </Marquee>
-        </section>
+        </div>
       )}
     </div>
   );

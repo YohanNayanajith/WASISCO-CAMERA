@@ -55,7 +55,7 @@
 }
 
 .second-section-container-image img:hover {
-  animation: mymove 2s;
+  animation: mymove2 2s;
   animation-fill-mode: forwards;
   color: var(--light-purple);
 }

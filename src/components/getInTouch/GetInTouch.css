@@ -1,0 +1,109 @@
+.get-in-touch-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 100px;
+}
+
+.get-in-touch-left {
+  flex: 30%;
+}
+.get-in-touch-left img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  /* background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1679901925/WASISCO/getInTouch/Place_your_Design_js0xom.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%; */
+}
+.get-in-touch-right {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: left;
+  font-family: "Montserrat";
+  flex: 70%;
+}
+.get-in-touch-right-header {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 76px;
+  color: #faf4fe;
+  text-align: left;
+  padding: 0px 0 30px;
+}
+.get-in-touch-right-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+  padding-bottom: 30px;
+  color: #c3c1c3;
+}
+.get-in-touch-right-arrow-image {
+  padding-top: 30px;
+}
+
+@media (max-width: 1400px) {
+  .get-in-touch-right-header {
+    font-size: 50px;
+    line-height: 70px;
+    padding: 10px 0;
+  }
+  .get-in-touch-right-description {
+    font-size: 22px;
+    line-height: 35px;
+    padding-bottom: 10px;
+  }
+  .get-in-touch-left img {
+    width: 80%;
+  }
+  .get-in-touch-right-arrow-image {
+    padding-top: 20px;
+  }
+}
+
+/* Mobile View */
+
+@media (max-width: 450px) {
+  .get-in-touch-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+  }
+  .get-in-touch-right-header {
+    padding: 30px 0;
+  }
+  .get-in-touch-right-description {
+    padding-bottom: 20px;
+  }
+
+  .get-in-touch-left {
+    order: 1;
+  }
+  .get-in-touch-left img {
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    width: 80%;
+  }
+  .get-in-touch-right {
+    order: 2;
+  }
+  .get-in-touch-right-header {
+    font-size: 46px;
+    line-height: 56px;
+    text-align: center;
+  }
+  .get-in-touch-right-description {
+    font-size: 20px;
+    line-height: 29px;
+  }
+  /* .get-in-touch-right-arrow-image {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  } */
+}
