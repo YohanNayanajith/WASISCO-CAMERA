@@ -1,5 +1,6 @@
 import React from "react";
 import "./SecondSection.css";
+import { isMobile } from "react-device-detect";
 
 const SecondSection = ({ reference, active }) => {
   const imageSection = () => {
@@ -18,7 +19,7 @@ const SecondSection = ({ reference, active }) => {
             individuals. we have years of experience working and collaborating
             on freelance works and managing all kind of projects.
           </div>
-          <div style={{paddingTop:"10px"}}>
+          <div style={{ paddingTop: "10px" }}>
             With our experience in Product Designing, we solve product problems
             and build appealing usable web experiences.
           </div>
@@ -37,16 +38,35 @@ const SecondSection = ({ reference, active }) => {
     );
   };
   return (
-    <section ref={reference} className="background-main-color">
-      {active ? (
-        <div className="second-section">
-          {titleSection()}
-          {imageSection()}
+    <>
+      {isMobile ? (
+        <div
+          ref={reference}
+          className="background-main-color"
+          style={{ paddingBottom: "100px" }}
+        >
+          {active ? (
+            <div className="second-section">
+              {titleSection()}
+              {imageSection()}
+            </div>
+          ) : (
+            <div className="second-section">{imageSection()}</div>
+          )}
         </div>
       ) : (
-        <div className="second-section">{imageSection()}</div>
+        <section ref={reference} className="background-main-color">
+          {active ? (
+            <div className="second-section">
+              {titleSection()}
+              {imageSection()}
+            </div>
+          ) : (
+            <div className="second-section">{imageSection()}</div>
+          )}
+        </section>
       )}
-    </section>
+    </>
   );
 };
 

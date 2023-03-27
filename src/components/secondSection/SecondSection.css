@@ -1,6 +1,6 @@
 .second-section {
   /* background-color: aqua; */
-  height: 100vh;
+  /* height: 100vh; */
   align-items: center;
 }
 
@@ -78,11 +78,14 @@
   .second-section-container {
     gap: 50px;
   }
+  .second-section-container-image img {
+    width: 80%;
+  }
   .second-section-container-content {
-    flex: 90%;
+    flex: 80%;
   }
   .second-section-container-image {
-    flex: 10%;
+    flex: 20%;
   }
 }
 

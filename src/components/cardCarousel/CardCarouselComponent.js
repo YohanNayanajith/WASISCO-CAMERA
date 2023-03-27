@@ -3,7 +3,7 @@ import "./CardCarousel.css";
 
 const CardCarouselComponent = (props) => {
   return (
-    <section className="background-main-color">
+    <div className="background-main-color">
       <div className="card-carousel-container">
         <div className="card-carousel-image">
           <img
@@ -14,7 +14,7 @@ const CardCarouselComponent = (props) => {
         <div className="card-carousel-header">{props.header}</div>
         <div className="card-carousel-number">{props.number}</div>
       </div>
-    </section>
+    </div>
   );
 };
 

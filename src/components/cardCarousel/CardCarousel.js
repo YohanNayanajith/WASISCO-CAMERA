@@ -4,18 +4,18 @@ import CardCarouselComponent from "./CardCarouselComponent";
 
 const CardCarousel = () => {
   return (
-    <section className="background-main-color-with-height">
-      <div style={{ position: "relative" }}>
+    <div className="background-main-color">
+      {/* <div style={{ position: "relative" }}> */}
         <div
-          style={{
-            position: "absolute",
-            top: "60%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "100%",
-            height: "100%",
-            backgroundColor: "red",
-          }}
+          // style={{
+          //   position: "absolute",
+          //   top: "60%",
+          //   left: "50%",
+          //   transform: "translate(-50%, -50%)",
+          //   width: "100%",
+          //   height: "100%",
+          //   backgroundColor: "red",
+          // }}
         >
           <Marquee
             gradient={false}
@@ -42,8 +42,8 @@ const CardCarousel = () => {
             <CardCarouselComponent header={"RATE"} number={"5.0(1244)"} />
           </Marquee>
         </div>
-      </div>
-    </section>
+      {/* </div> */}
+    </div>
   );
 };
 

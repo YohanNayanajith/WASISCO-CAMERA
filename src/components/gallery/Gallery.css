@@ -1,12 +1,5 @@
 .gallery-container {
-  /* position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justifycontent: center;
-  alignitems: center; */
-  /* transform: translate(0%, 0%) rotate(7deg); */
-  /* background-color: blue; */
+  position: relative;
 }
 .gallery-image-container {
   display: flex;
@@ -16,9 +9,7 @@
   /* padding-bottom: 100px; */
   opacity: 0.3;
 }
-.gallery-container {
-  position: relative;
-}
+
 .gallery-card-component-content {
   position: absolute;
   font-family: "Montserrat";
@@ -29,7 +20,7 @@
   color: #faf4fe;
   z-index: 99;
 
-  top: 45%;
+  top: 65%;
   left: 25%;
   transform: translate(-50%, -65%);
   text-align: left;
@@ -39,7 +30,7 @@
   .gallery-card-component-content {
     /* font-size: 60px;
     line-height: 80px; */
-  left: 35%;
+    left: 35%;
   }
 }
 
@@ -47,7 +38,7 @@
   .gallery-card-component-content {
     font-size: 60px;
     line-height: 80px;
-  left: 40%;
+    left: 40%;
   }
 }
 
@@ -55,7 +46,7 @@
   .gallery-card-component-content {
     font-size: 38px;
     line-height: 60px;
-    top: 45%;
-  left: 50%;
+    top: 65%;
+    left: 50%;
   }
 }

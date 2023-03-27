@@ -6,18 +6,17 @@ import Gallery from "../gallery/Gallery";
 const Services = () => {
   return (
     <div>
-      <section
+      <div
         style={{
           position: "relative",
-          height: "30vh",
           width: "100vw",
         //   backgroundColor: "red",
         }}
         touch-action="none"
-        className="background-main-color-with-height"
+        className="background-main-color"
       >
         <ServiceHeaderLeft header={"SERVICES"} headerNumber={"01"} />
-      </section>
+      </div>
       <Gallery />
     </div>
   );
