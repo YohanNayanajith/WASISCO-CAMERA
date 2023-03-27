@@ -5,7 +5,7 @@ import Gallery from "../gallery/Gallery";
 
 const Services = () => {
   return (
-    <div>
+    <div className="background-main-color">
       <div
         style={{
           position: "relative",
@@ -13,7 +13,6 @@ const Services = () => {
         //   backgroundColor: "red",
         }}
         touch-action="none"
-        className="background-main-color"
       >
         <ServiceHeaderLeft header={"SERVICES"} headerNumber={"01"} />
       </div>

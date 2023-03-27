@@ -7,15 +7,9 @@ const CardCarousel = () => {
     <div className="background-main-color">
       {/* <div style={{ position: "relative" }}> */}
         <div
-          // style={{
-          //   position: "absolute",
-          //   top: "60%",
-          //   left: "50%",
-          //   transform: "translate(-50%, -50%)",
-          //   width: "100%",
-          //   height: "100%",
-          //   backgroundColor: "red",
-          // }}
+          style={{
+            padding: "60px 0 0"
+          }}
         >
           <Marquee
             gradient={false}

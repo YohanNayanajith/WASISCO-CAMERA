@@ -22,7 +22,7 @@ const ContactService = () => {
           top: "0",
           left: "0",
           // transform: "translate(-50%, -50%)",
-          zIndex: 9999,
+          zIndex: 99,
           width: "100%",
           //   height: "100%",
           // backgroundColor:"pink"
