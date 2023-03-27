@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const ServiceHeaderRight = (props) => {
   return (
-    <section className="background-main-color">
+    <div>
       <div className="service-header-main-right">
         <div className="service-header-main-content-right">
           <Typewriter
@@ -27,7 +27,7 @@ const ServiceHeaderRight = (props) => {
         </div>
         <div className="service-header-offset-right"></div>
       </div>
-    </section>
+    </div>
   );
 };
 
