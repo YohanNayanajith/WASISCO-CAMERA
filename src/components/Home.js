@@ -1,17 +1,30 @@
-import React, { useEffect, useRef, useState } from "react";
-import MainSection from "./mainSection/MainSection";
-import VideoPlayer from "./videoPlayer/VideoPlayer";
-import ContactService from "./contactService/ContactService";
-import NameCarousel from "./nameCarousel/NameCarousel";
-import SecondSection from "./secondSection/SecondSection";
-import Services from "./services/Services";
-import CardCarousel from "./cardCarousel/CardCarousel";
-import RecentWorksService from "./recentWorkService/RecentWorksService";
-import HandShake from "./handShake/HandShake";
-import GetInTouch from "./getInTouch/GetInTouch";
-import Footer from "./footer/Footer";
-import AboutUs from "./aboutUs/AboutUs";
-import Blogs from "./blogs/Blogs";
+import React, { useEffect, useRef, useState, Suspense } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import {
+  Preload,
+  ScrollControls,
+  Scroll,
+  useScroll,
+  Image as ImageImpl,
+} from "@react-three/drei";
+const MainSection = React.lazy(() => import("./mainSection/MainSection"));
+const VideoPlayer = React.lazy(() => import("./videoPlayer/VideoPlayer"));
+const ContactService = React.lazy(() =>
+  import("./contactService/ContactService")
+);
+const NameCarousel = React.lazy(() => import("./nameCarousel/NameCarousel"));
+const SecondSection = React.lazy(() => import("./secondSection/SecondSection"));
+const Services = React.lazy(() => import("./services/Services"));
+const CardCarousel = React.lazy(() => import("./cardCarousel/CardCarousel"));
+const RecentWorksService = React.lazy(() =>
+  import("./recentWorkService/RecentWorksService")
+);
+const HandShake = React.lazy(() => import("./handShake/HandShake"));
+const GetInTouch = React.lazy(() => import("./getInTouch/GetInTouch"));
+const Footer = React.lazy(() => import("./footer/Footer"));
+const AboutUs = React.lazy(() => import("./aboutUs/AboutUs"));
+const Blogs = React.lazy(() => import("./blogs/Blogs"));
+const OurTeam = React.lazy(() => import("./ourTeam/OurTeam"));
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -42,25 +55,39 @@ const Home = () => {
         contactClick={() => scrollToDiv(contact)}
       />
 
-      {/* <VideoPlayer /> */}
-      <NameCarousel active={true} />
-      <VideoPlayer />
-      <SecondSection reference={secondSection} active={true} />
-      <Services />
-      <SecondSection reference={secondSection} active={true} />
-      <CardCarousel />
-      <RecentWorksService />
-      <NameCarousel active={false} />
-      <HandShake />
-      <Blogs />
-      <AboutUs />
-      {/* our team */}
+      <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
+        <Suspense fallback={null}>
+          <ScrollControls damping={4} pages={3}>
+            <Scroll>
+              {/* <VideoPlayer /> */}
+              <NameCarousel active={true} />
+              <VideoPlayer />
+              <SecondSection reference={secondSection} active={true} />
+              <Services />
+              <SecondSection reference={secondSection} active={true} />
+              <CardCarousel />
+              <RecentWorksService />
+              <NameCarousel active={false} />
+              <HandShake />
+              <Blogs />
+              <AboutUs />
+              {/* our team */}
+              {/* <OurTeam /> */}
+              <SecondSection reference={secondSection} active={false} />
+              <ContactService />
 
-      <SecondSection reference={secondSection} active={false} />
-      <ContactService />
-
-      <GetInTouch />
-      <Footer reference={footer} />
+              <GetInTouch />
+              <Footer reference={footer} />
+            </Scroll>
+            {/* <Scroll html>
+            <h1 style={{ position: 'absolute', top: '60vh', left: '0.5em' }}>to</h1>
+            <h1 style={{ position: 'absolute', top: '120vh', left: '60vw' }}>be</h1>
+            <h1 style={{ position: 'absolute', top: '198.5vh', left: '0.5vw', fontSize: '40vw' }}>home</h1>
+          </Scroll> */}
+          </ScrollControls>
+          <Preload />
+        </Suspense>
+      </Canvas>
     </div>
   );
 };
