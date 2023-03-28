@@ -3,14 +3,14 @@ import "./Services.css";
 import ServiceHeaderLeft from "../serviceHeaderLeft/ServiceHeaderLeft";
 import Gallery from "../gallery/Gallery";
 
-const Services = () => {
+const Services = ({ reference }) => {
   return (
-    <div className="background-main-color">
+    <div className="background-main-color" ref={reference} >
       <div
         style={{
           position: "relative",
           width: "100vw",
-        //   backgroundColor: "red",
+          //   backgroundColor: "red",
         }}
         touch-action="none"
       >

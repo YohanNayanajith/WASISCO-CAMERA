@@ -2,9 +2,9 @@ import React from "react";
 import Blog from "../blog/Blog";
 import ServiceHeaderLeft from "../serviceHeaderLeft/ServiceHeaderLeft";
 
-const Blogs = () => {
+const Blogs = ({reference}) => {
   return (
-    <div className="background-main-color">
+    <div className="background-main-color" ref={reference}>
       <div
         style={{
           position: "relative",

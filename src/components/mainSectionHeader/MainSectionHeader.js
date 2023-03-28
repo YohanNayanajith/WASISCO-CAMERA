@@ -2,7 +2,7 @@ import React from "react";
 import "./MainSectionHeader.css";
 import Typewriter from "typewriter-effect";
 
-const MainSectionHeader = () => {
+const MainSectionHeader = ({reference}) => {
   return (
     <section
       className="background-main-color-with-height"
@@ -13,6 +13,7 @@ const MainSectionHeader = () => {
         width: "100%",
         height: "100%",
       }}
+      ref={reference}
     >
       <div className="main-section-animation"></div>
       <div className="main-section-header-container">

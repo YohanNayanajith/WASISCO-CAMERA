@@ -10,7 +10,7 @@ function NavBar(props) {
     <div className={props.display ? "navbar-cnt navbar-display" : "navbar-cnt"}>
       <div className="mobile-menu-row">
         <div onClick={props.mainSectionClick} className="navbar-img-cnt">
-          <img src={logo} alt="" className="navbar-img" />
+          <img src={logo} alt="logo" className="navbar-img" />
         </div>
         <div
           onClick={() => {
@@ -33,7 +33,7 @@ function NavBar(props) {
       >
         <div
           onClick={() => {
-            props.wasiscoImageSectionClick();
+            props.mainSectionClick();
             setClicked(false);
           }}
           className="mobile-row"
@@ -42,7 +42,7 @@ function NavBar(props) {
         </div>
         <div
           onClick={() => {
-            props.wasiscoImageSectionClick();
+            props.servicesClick();
             setClicked(false);
           }}
           className="mobile-row"
@@ -51,7 +51,7 @@ function NavBar(props) {
         </div>
         <div
           onClick={() => {
-            props.timelineClick();
+            props.recentClick();
             setClicked(false);
           }}
           className="mobile-row"
@@ -61,7 +61,7 @@ function NavBar(props) {
 
         <div
           onClick={() => {
-            props.praposalSubmissionClick();
+            props.blogsClick();
             setClicked(false);
           }}
           className="mobile-row"
@@ -70,7 +70,7 @@ function NavBar(props) {
         </div>
         <div
           onClick={() => {
-            props.pricesClick();
+            props.aboutClick();
             setClicked(false);
           }}
           className="mobile-row"
@@ -92,27 +92,27 @@ function NavBar(props) {
         <div className="navbar-item-cnt"></div>
         <div className="navbar-item-cnt"></div>
         <div className="navbar-item-cnt">
-          <div onClick={props.wasiscoImageSectionClick}>HOME</div>
+          <div onClick={props.mainSectionClick}>HOME</div>
           <div className="navbar-not-clicked"></div>
         </div>
 
         <div className="navbar-item-cnt">
-          <div onClick={props.wasiscoImageSectionClick}>SERVICES</div>
+          <div onClick={props.servicesClick}>SERVICES</div>
           <div className="navbar-not-clicked"></div>
         </div>
 
         <div className="navbar-item-cnt">
-          <div onClick={props.timelineClick}>RECENT</div>
+          <div onClick={props.recentClick}>RECENT</div>
           <div className="navbar-not-clicked"></div>
         </div>
 
         <div className="navbar-item-cnt">
-          <div onClick={props.praposalSubmissionClick}>BLOGS</div>
+          <div onClick={props.blogsClick}>BLOGS</div>
           <div className="navbar-not-clicked"></div>
         </div>
 
         <div className="navbar-item-cnt">
-          <div onClick={props.pricesClick}>ABOUT</div>
+          <div onClick={props.aboutClick}>ABOUT</div>
           <div className="navbar-not-clicked"></div>
         </div>
 

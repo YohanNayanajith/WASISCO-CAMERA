@@ -18,7 +18,7 @@ const draw = {
   },
 };
 
-const SecondSection = ({ reference, active }) => {
+const SecondSection = ({ active }) => {
   const imageSection = () => {
     return (
       <div className="container second-section-container">
@@ -76,7 +76,6 @@ const SecondSection = ({ reference, active }) => {
     <>
       {isMobile ? (
         <div
-          ref={reference}
           className="background-main-color"
           style={{ paddingBottom: "100px" }}
         >
@@ -90,7 +89,7 @@ const SecondSection = ({ reference, active }) => {
           )}
         </div>
       ) : (
-        <div ref={reference} className="background-main-color">
+        <div className="background-main-color">
           {active ? (
             <div className="second-section">
               {titleSection()}

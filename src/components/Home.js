@@ -27,31 +27,25 @@ const Blogs = React.lazy(() => import("./blogs/Blogs"));
 const OurTeam = React.lazy(() => import("./ourTeam/OurTeam"));
 
 const Home = () => {
+  // Home
   const scrollToDiv = (ref) =>
     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
-  const mainSection = useRef();
-  const videoPlayer = useRef();
-  const timeline = useRef();
-  const praposalSubmission = useRef();
-  const whatTheySay = useRef();
-  const sponsers = useRef();
-  const prices = useRef();
+  const mainSection = useRef(); //mainSection
+  const services = useRef();
+  const recent = useRef();
+  const blogs = useRef();
+  const about = useRef();
   const contact = useRef();
-  const secondSection = useRef();
 
-  const getInTouch = useRef();
-  const footer = useRef();
   return (
     <div>
       <MainSection
         reference={mainSection}
         mainSectionClick={() => scrollToDiv(mainSection)}
-        videoPlayerClick={() => scrollToDiv(videoPlayer)}
-        timelineClick={() => scrollToDiv(timeline)}
-        praposalSubmissionClick={() => scrollToDiv(praposalSubmission)}
-        whatTheySayClick={() => scrollToDiv(whatTheySay)}
-        sponsersClick={() => scrollToDiv(sponsers)}
-        pricesClick={() => scrollToDiv(prices)}
+        servicesClick={() => scrollToDiv(services)}
+        recentClick={() => scrollToDiv(recent)}
+        blogsClick={() => scrollToDiv(blogs)}
+        aboutClick={() => scrollToDiv(about)}
         contactClick={() => scrollToDiv(contact)}
       />
 
@@ -62,22 +56,22 @@ const Home = () => {
       {/* <VideoPlayer /> */}
       <NameCarousel active={true} />
       <VideoPlayer />
-      <SecondSection reference={secondSection} active={true} />
-      <Services />
-      <SecondSection reference={secondSection} active={true} />
+      <SecondSection active={true} />
+      <Services reference={services} />
+      <SecondSection active={true} />
       <CardCarousel />
-      <RecentWorksService />
+      <RecentWorksService reference={recent} />
       <NameCarousel active={false} />
       <HandShake />
-      <Blogs />
-      <AboutUs />
+      <Blogs reference={blogs} />
+      <AboutUs reference={about} />
       {/* our team */}
       {/* <OurTeam /> */}
-      <SecondSection reference={secondSection} active={false} />
-      <ContactService />
+      <SecondSection active={false} />
+      <ContactService reference={contact} />
 
       <GetInTouch />
-      <Footer reference={footer} />
+      <Footer />
       {/* </Scroll> */}
       {/* <Scroll html>
             <h1 style={{ position: 'absolute', top: '60vh', left: '0.5em' }}>to</h1>

@@ -1,12 +1,16 @@
-import React from 'react'
-import './RecentWorksService.css'
-import ServiceHeaderRight from '../serviceHeaderRight/ServiceHeaderRight'
-import RecentWorks from '../recentWorks/RecentWorks'
-import ServiceHeaderLeft from '../serviceHeaderLeft/ServiceHeaderLeft'
+import React from "react";
+import "./RecentWorksService.css";
+import ServiceHeaderRight from "../serviceHeaderRight/ServiceHeaderRight";
+import RecentWorks from "../recentWorks/RecentWorks";
+import ServiceHeaderLeft from "../serviceHeaderLeft/ServiceHeaderLeft";
 
-const RecentWorksService = () => {
+const RecentWorksService = ({ reference }) => {
   return (
-    <div className='background-main-color' style={{ paddingBottom:"50px"}}>
+    <div
+      className="background-main-color"
+      style={{ paddingBottom: "50px" }}
+      ref={reference}
+    >
       <div
         style={{
           position: "relative",
@@ -22,7 +26,7 @@ const RecentWorksService = () => {
       </div>
       <RecentWorks />
     </div>
-  )
-}
+  );
+};
 
-export default RecentWorksService
+export default RecentWorksService;

@@ -4,7 +4,7 @@ import ServiceHeaderLeft from "../serviceHeaderLeft/ServiceHeaderLeft";
 import OverlayHand from "../overlay/OverlayHand";
 import { Hand } from "../threeJsModels/Hand";
 
-const ContactService = () => {
+const ContactService = ({reference}) => {
   return (
     <section
       style={{
@@ -15,6 +15,7 @@ const ContactService = () => {
       id="container"
       touch-action="none"
       className="contact-us-background"
+      ref={reference}
     >
       <div
         style={{

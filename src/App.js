@@ -61,6 +61,7 @@ function App() {
             outerAlpha={0}
             outerStyle={{
               border: "3px solid #fff",
+              zIndex:9999
             }}
           />
           <div

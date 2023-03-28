@@ -3,7 +3,7 @@ import ServiceHeaderRight from "../serviceHeaderRight/ServiceHeaderRight";
 import About from "../about/About";
 import { isMobile } from "react-device-detect";
 
-const AboutUs = () => {
+const AboutUs = ({reference}) => {
   return (
     <>
       {isMobile ? (
@@ -16,6 +16,7 @@ const AboutUs = () => {
           id="container"
           touch-action="none"
           className="background-main-color"
+          ref={reference}
         >
           <ServiceHeaderRight header={"ABOUT"} headerNumber={"04"} />
           <About />
@@ -28,6 +29,7 @@ const AboutUs = () => {
           id="container"
           touch-action="none"
           className="background-main-color"
+          ref={reference}
         >
           <ServiceHeaderRight header={"ABOUT"} headerNumber={"04"} />
           <About />

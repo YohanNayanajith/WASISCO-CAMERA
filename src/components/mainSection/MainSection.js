@@ -8,12 +8,10 @@ import MainSectionHeader from "../mainSectionHeader/MainSectionHeader";
 const MainSection = ({
   reference,
   mainSectionClick,
-  wasiscoImageSectionClick,
-  timelineClick,
-  praposalSubmissionClick,
-  whatTheySayClick,
-  sponsersClick,
-  pricesClick,
+  servicesClick,
+  recentClick,
+  blogsClick,
+  aboutClick,
   contactClick,
 }) => {
   const [display, setdisplay] = useState(false);
@@ -29,22 +27,20 @@ const MainSection = ({
   window.addEventListener("scroll", displayNavBar);
 
   return (
-    <div ref={reference}>
+    <section>
       <div className="main-section-cnt">
         <NavBar
           mainSectionClick={mainSectionClick}
-          wasiscoImageSectionClick={wasiscoImageSectionClick}
-          timelineClick={timelineClick}
-          praposalSubmissionClick={praposalSubmissionClick}
-          whatTheySayClick={whatTheySayClick}
-          sponsersClick={sponsersClick}
-          pricesClick={pricesClick}
+          servicesClick={servicesClick}
+          recentClick={recentClick}
+          blogsClick={blogsClick}
+          aboutClick={aboutClick}
           display={display}
           contactClick={contactClick}
         />
-        <MainSectionHeader />
+        <MainSectionHeader reference={reference} />
       </div>
-    </div>
+    </section>
   );
 };
 
