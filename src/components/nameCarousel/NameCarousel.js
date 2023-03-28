@@ -7,10 +7,10 @@ const NameCarousel = ({ active }) => {
   return (
     <div>
       {active ? (
-        <section className="background-main-color">
+        <div>
           <div
             style={{
-              position: "relative",
+              position: "absolute",
               width: "100%",
               height: "100%",
               display: "flex",
@@ -48,7 +48,7 @@ const NameCarousel = ({ active }) => {
             </Marquee>
           </div>
           {/* </div> */}
-        </section>
+        </div>
       ) : (
         <div style={{ padding: "50px 0"}} className="background-main-color">
           <Marquee

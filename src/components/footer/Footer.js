@@ -22,9 +22,12 @@ const Footer = ({ reference }) => {
           <a href="https://advanced.team/">hello@advanced.team</a>
         </div>
         <div className="footer-social-media">
-          <a href="#">Facebook</a><br />
-          <a href="#">Instagram</a><br />
-          <a href="#">Dribble</a><br />
+          <a href="#">Facebook</a>
+          <br />
+          <a href="#">Instagram</a>
+          <br />
+          <a href="#">Dribble</a>
+          <br />
           <a href="#">Behance</a>
         </div>
         <div className="footer-address3">
@@ -34,6 +37,15 @@ const Footer = ({ reference }) => {
           <br />
           be advanced
         </div>
+      </div>
+      <div
+        className="text-center p-3"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+      >
+        © 2023 Copyright:
+        <a className="text-white" href="https://github.com/YohanNayanajith">
+          Yohan Nayanajith
+        </a>
       </div>
     </div>
   );

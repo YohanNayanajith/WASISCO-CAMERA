@@ -54,7 +54,7 @@ const Home = () => {
           <ScrollControls damping={4} pages={3}>
             <Scroll> */}
       {/* <VideoPlayer /> */}
-      <NameCarousel active={true} />
+      {/* <NameCarousel active={true} /> */}
       <VideoPlayer />
       <SecondSection active={true} />
       <Services reference={services} />
