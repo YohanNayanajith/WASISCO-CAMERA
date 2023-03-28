@@ -7,6 +7,8 @@ import {
   useScroll,
   Image as ImageImpl,
 } from "@react-three/drei";
+import ThreeFooter from "./footer/ThreeFooter";
+import FooterWithThree from "./threeJsModels/FooterWithThree";
 const MainSection = React.lazy(() => import("./mainSection/MainSection"));
 const VideoPlayer = React.lazy(() => import("./videoPlayer/VideoPlayer"));
 const ContactService = React.lazy(() =>
@@ -71,7 +73,9 @@ const Home = () => {
       <ContactService reference={contact} />
 
       <GetInTouch />
-      <Footer />
+      {/* <Footer /> */}
+      {/* <ThreeFooter /> */}
+      <FooterWithThree />
       {/* </Scroll> */}
       {/* <Scroll html>
             <h1 style={{ position: 'absolute', top: '60vh', left: '0.5em' }}>to</h1>
