@@ -43,7 +43,7 @@ const Gallery = ({ reference }) => {
           </div>
         </div>
       ) : (
-        <section ref={reference}>
+        <div ref={reference}>
           <div className="gallery-container">
             <div>
               <Marquee
@@ -75,7 +75,7 @@ const Gallery = ({ reference }) => {
               Communication
             </div>
           </div>
-        </section>
+        </div>
       )}
     </>
   );

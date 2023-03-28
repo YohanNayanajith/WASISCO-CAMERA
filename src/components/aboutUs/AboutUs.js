@@ -22,7 +22,7 @@ const AboutUs = ({reference}) => {
           <About />
         </div>
       ) : (
-        <section
+        <div
           style={{
             position: "relative"
           }}
@@ -33,7 +33,7 @@ const AboutUs = ({reference}) => {
         >
           <ServiceHeaderRight header={"ABOUT"} headerNumber={"04"} />
           <About />
-        </section>
+        </div>
       )}
     </>
   );

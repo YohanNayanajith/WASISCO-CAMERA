@@ -20,8 +20,7 @@ const VideoPlayer = () => {
   const [height, setHeight] = useState(window.innerHeight);
   const src = "https://www.youtube.com/embed/d-f1TTE6WZg?list=RD4g7wxrjWBoA";
   return (
-    // <div className="background-main-color d-flex flex-column justify-content-center">
-    <div className=" d-flex flex-column justify-content-center">
+    <div className="background-main-color d-flex flex-column justify-content-center">
       <div
         style={{
           color: "white",

@@ -20,7 +20,7 @@ const HandShake = () => {
           </div>
         </div>
       ) : (
-        <section className="our-team-background">
+        <div className="our-team-background">
           <div className="hand-shake-container">
             <div className="hand-shake-image">
               <img
@@ -32,7 +32,7 @@ const HandShake = () => {
               WE WORK <span>SYNERGY</span> WITH YOU!
             </div>
           </div>
-        </section>
+        </div>
       )}
     </>
   );

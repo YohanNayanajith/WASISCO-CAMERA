@@ -96,7 +96,7 @@ const SecondSection = ({ active }) => {
               {imageSection()}
             </div>
           ) : (
-            <div className="second-section">{imageSection()}</div>
+            <div className="second-section" style={{paddingTop:"80px"}}>{imageSection()}</div>
           )}
         </div>
       )}
