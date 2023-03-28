@@ -55,39 +55,39 @@ const Home = () => {
         contactClick={() => scrollToDiv(contact)}
       />
 
-      <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
+      {/* <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
         <Suspense fallback={null}>
           <ScrollControls damping={4} pages={3}>
-            <Scroll>
-              {/* <VideoPlayer /> */}
-              <NameCarousel active={true} />
-              <VideoPlayer />
-              <SecondSection reference={secondSection} active={true} />
-              <Services />
-              <SecondSection reference={secondSection} active={true} />
-              <CardCarousel />
-              <RecentWorksService />
-              <NameCarousel active={false} />
-              <HandShake />
-              <Blogs />
-              <AboutUs />
-              {/* our team */}
-              {/* <OurTeam /> */}
-              <SecondSection reference={secondSection} active={false} />
-              <ContactService />
+            <Scroll> */}
+      {/* <VideoPlayer /> */}
+      <NameCarousel active={true} />
+      <VideoPlayer />
+      <SecondSection reference={secondSection} active={true} />
+      <Services />
+      <SecondSection reference={secondSection} active={true} />
+      <CardCarousel />
+      <RecentWorksService />
+      <NameCarousel active={false} />
+      <HandShake />
+      <Blogs />
+      <AboutUs />
+      {/* our team */}
+      {/* <OurTeam /> */}
+      <SecondSection reference={secondSection} active={false} />
+      <ContactService />
 
-              <GetInTouch />
-              <Footer reference={footer} />
-            </Scroll>
-            {/* <Scroll html>
+      <GetInTouch />
+      <Footer reference={footer} />
+      {/* </Scroll> */}
+      {/* <Scroll html>
             <h1 style={{ position: 'absolute', top: '60vh', left: '0.5em' }}>to</h1>
             <h1 style={{ position: 'absolute', top: '120vh', left: '60vw' }}>be</h1>
             <h1 style={{ position: 'absolute', top: '198.5vh', left: '0.5vw', fontSize: '40vw' }}>home</h1>
           </Scroll> */}
-          </ScrollControls>
+      {/* </ScrollControls>
           <Preload />
         </Suspense>
-      </Canvas>
+      </Canvas> */}
     </div>
   );
 };
