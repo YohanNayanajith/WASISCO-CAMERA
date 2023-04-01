@@ -100,7 +100,7 @@ function Model({ ...props }) {
 
 const Camera = () => {
   return (
-    <section className="wrapper" style={{ backgroundColor: "black" }}>
+    <section className="wrapper" style={{ backgroundColor: "black", zIndex:10 }}>
       <Canvas camera={{ fov: 70, position: [0, 0, 15] }}>
         <Suspense fallback={null}>
           <ambientLight />

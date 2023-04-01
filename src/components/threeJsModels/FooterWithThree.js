@@ -37,7 +37,7 @@ const FooterWithThree = ({ reference }) => {
         style={{ backgroundColor: "black", width: "100vw" }}
       >
         © 2023 Copyright:
-        <a className="text-white" href="https://github.com/YohanNayanajith">
+        <a className="text-white" href="https://www.linkedin.com/in/yohan-nayanajith/">
           Yohan Nayanajith
         </a>
       </div>
