@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import NavBar from "../navbar/Navbar";
 import Logo from "../../images/logo/wasisco.png";
 import MainSectionHeader from "../mainSectionHeader/MainSectionHeader";
+import Camera from "../threeJsModels/Camera";
 
 const MainSection = ({
   reference,
@@ -38,7 +39,17 @@ const MainSection = ({
           display={display}
           contactClick={contactClick}
         />
-        <MainSectionHeader reference={reference} />
+        <div
+          style={{
+            position: "relative",
+            height: "100vh",
+            width: "100vw",
+          }}
+          touch-action="none"
+        >
+          <MainSectionHeader reference={reference} />
+          <Camera />
+        </div>
       </div>
     </section>
   );

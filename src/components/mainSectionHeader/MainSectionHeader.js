@@ -5,13 +5,14 @@ import Typewriter from "typewriter-effect";
 const MainSectionHeader = ({reference}) => {
   return (
     <section
-      className="background-main-color-with-height"
+      // className="background-main-color-with-height"
       style={{
         position: "absolute",
         top: 0,
         left: 0,
         width: "100%",
         height: "100%",
+        zIndex: 99,
       }}
       ref={reference}
     >
