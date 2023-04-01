@@ -68,7 +68,7 @@ const Home = () => {
       <Blogs reference={blogs} />
       <AboutUs reference={about} />
       {/* our team */}
-      {/* <OurTeam /> */}
+      <OurTeam />
       <SecondSection active={false} />
       <ContactService reference={contact} />
 

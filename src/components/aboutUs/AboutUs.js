@@ -11,7 +11,7 @@ const AboutUs = ({reference}) => {
           style={{
             position: "relative",
             width: "100vw",
-            paddingBottom: "80px"
+            // paddingBottom: "80px"
           }}
           id="container"
           touch-action="none"
@@ -24,7 +24,8 @@ const AboutUs = ({reference}) => {
       ) : (
         <div
           style={{
-            position: "relative"
+            position: "relative",
+            paddingBottom: "80px"
           }}
           id="container"
           touch-action="none"

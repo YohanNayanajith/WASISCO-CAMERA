@@ -1,0 +1,276 @@
+.our-team-name-center {
+  /* text-align: center; */
+}
+.our-team-name-center div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.ball-container {
+  position: relative;
+  /* height: 400px;
+  width: 400px; */
+  /* margin: 0 auto; */
+  /* background-color: aqua; */
+  height: 100vh;
+  /* border-radius: 50%; */
+}
+
+/* .ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.color-ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.red {
+  background-color: red;
+  animation-delay: 0s;
+}
+
+.orange {
+  background-color: orange;
+  animation-delay: 0.4s;
+}
+
+.yellow {
+  background-color: yellow;
+  animation-delay: 0.8s;
+}
+
+.green {
+  background-color: green;
+  animation-delay: 1.2s;
+}
+
+.blue {
+  background-color: blue;
+  animation-delay: 1.6s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+} */
+
+.our-team-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-team-container-detail {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  /* height: 200px; */
+  /* width: 200px; */
+  /* border-radius: 50%; */
+  /* background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.our-team-container-detail-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 63px;
+  letter-spacing: 0.09em;
+  color: var(--white);
+}
+
+.our-team-container-detail-content {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: 0.09em;
+
+  color: #e2e2e2;
+}
+
+.ball-container {
+  position: relative;
+}
+
+.color-ball {
+  position: absolute;
+  border-radius: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* animation: rotate 5s infinite linear; */
+}
+
+.color-ball-1 {
+  top: 20%;
+  /* left: 50%;
+  transform: translateX(-50%) translateY(-100px); */
+  width: 120px;
+  height: 120px;
+  left: calc(50% - 140px);
+  /* background-color: red; */
+
+  background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1680293145/WASISCO/Our%20Team/Ellipse_168_ippxl1.png");
+}
+
+.color-ball-2 {
+  top: 50%;
+  /* top: calc(20% + 50px); */
+  width: 120px;
+  height: 120px;
+  left: calc(50% - 320px);
+  /* background-color: blue; */
+
+  background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1680293145/WASISCO/Our%20Team/Ellipse_168_ippxl1.png");
+}
+
+.color-ball-3 {
+  top: 80%;
+  left: calc(50% - 100px);
+  /* left: 50%;
+  transform: translateX(-50%) translateY(0); */
+  width: 140px;
+  height: 140px;
+  /* background-color: yellow; */
+
+  background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1680293145/WASISCO/Our%20Team/Ellipse_168_ippxl1.png");
+}
+
+.color-ball-4 {
+  top: 55%;
+  left: calc(50% + 250px);
+  width: 100px;
+  height: 100px;
+  /* background-color: green; */
+
+  background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1680293145/WASISCO/Our%20Team/Ellipse_168_ippxl1.png");
+}
+
+.color-ball-5 {
+  top: 25%;
+  left: calc(50% + 100px);
+  width: 85px;
+  height: 85px;
+  /* background-color: orange; */
+
+  background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1680293145/WASISCO/Our%20Team/Ellipse_168_ippxl1.png");
+}
+
+.color-ball-6 {
+  top: 75%;
+  left: calc(50% + 120px);
+  width: 85px;
+  height: 85px;
+  /* background-color: pink; */
+
+  background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1680293145/WASISCO/Our%20Team/Ellipse_168_ippxl1.png");
+}
+
+/* @keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 450px) {
+  .our-team-container-detail {
+    top: 50%;
+    left: 50%;
+  }
+  .our-team-container-detail-header {
+    font-size: 30px;
+    line-height: 43px;
+  }
+
+  .our-team-container-detail-content {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .color-ball-1 {
+    top: 25%;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 120px);
+  }
+
+  .color-ball-2 {
+    top: 46%;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 195px);
+  }
+
+  .color-ball-3 {
+    top: 65%;
+    left: calc(50% - 120px);
+    /* left: 50%; */
+    width: 120px;
+    height: 120px;
+  }
+
+  .color-ball-4 {
+    top: 48%;
+    left: calc(50% + 120px);
+    width: 80px;
+    height: 80px;
+  }
+
+  .color-ball-5 {
+    top: 30%;
+    left: calc(50% + 80px);
+    width: 85px;
+    height: 85px;
+  }
+
+  .color-ball-6 {
+    top: 58%;
+    left: calc(50% + 35px);
+    width: 85px;
+    height: 85px;
+  }
+}

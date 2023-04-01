@@ -4,7 +4,7 @@ import Team from '../team/Team'
 const OurTeam = () => {
   return (
     
-    <div><Team /></div>
+    <section className="background-main-color"><Team /></section>
   )
 }
 
