@@ -68,7 +68,7 @@ function Model({ ...props }) {
       <group
         position={[0.33, -0.45, -0.82]}
         // rotation={[0, -Math.PI / 2, 0]}
-        scale={isMobile ? 40 : 120}
+        scale={isMobile ? 80 : 140}
       >
         <mesh
           geometry={nodes.Mesh016.geometry}
