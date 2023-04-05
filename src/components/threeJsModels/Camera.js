@@ -22,7 +22,8 @@ function Model({ ...props }) {
   const modelRef = useRef();
   const group = useRef();
   const [hovered, setHovered] = useState(false);
-  const { nodes, materials } = useGLTF("/models/camera-without-scroll.glb");
+  // const { nodes, materials } = useGLTF("/models/camera-without-scroll.glb");
+  const { nodes, materials } = useGLTF("/models/camera-lense.glb");
 
   useEffect(() => {
     // Set the initial color of the material
@@ -103,6 +104,9 @@ const Camera = () => {
   const containerRef = useRef(null);
   const modelRef = useRef(null);
   let scale = 1;
+  let maximumScaleValue = 5;
+  let minimumScaleValue = 1;
+  let increaseDecreaseScaleValue = 0.3;
 
   useEffect(() => {
     const container = containerRef.current;
@@ -110,18 +114,18 @@ const Camera = () => {
 
     const handleScroll = (e) => {
       e.preventDefault();
-      const delta = e.deltaY > 0 ? 0.1 : -0.1; // increase or decrease scale based on scroll direction
+      const delta = e.deltaY > 0 ? increaseDecreaseScaleValue : -increaseDecreaseScaleValue; // increase or decrease scale based on scroll direction
       scale += delta;
       // gsap.to(model, {
       //   scale: scale,
       //   duration: 0.3,
       //   transformOrigin: "center center",
       // });
-      if (scale >= 2) { // adjust the maximum zoom scale as needed
+      if (scale >= maximumScaleValue) { // adjust the maximum zoom scale as needed
         window.scrollBy({ top: window.innerHeight, left: 0, behavior: 'smooth' }); // scroll to the next section
-        scale = 2; // reset the scale
-      } else if (scale <= 1) { // adjust the minimum zoom scale as needed
-        scale = 1; // set the minimum scale
+        scale = maximumScaleValue; // reset the scale
+      } else if (scale <= minimumScaleValue) { // adjust the minimum zoom scale as needed
+        scale = minimumScaleValue; // set the minimum scale
       } else {
         gsap.to(model, { scale: scale, duration: 0.3, transformOrigin: 'center center' }); // zoom the model
       }

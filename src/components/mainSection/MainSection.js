@@ -5,6 +5,8 @@ import NavBar from "../navbar/Navbar";
 import Logo from "../../images/logo/wasisco.png";
 import MainSectionHeader from "../mainSectionHeader/MainSectionHeader";
 import Camera from "../threeJsModels/Camera";
+import CameraLense from "../threeJsModels/CameraLense";
+import CameraLenseWithoutStrap from "../threeJsModels/CameraLenseWithoutStrap";
 
 const MainSection = ({
   reference,
@@ -48,7 +50,9 @@ const MainSection = ({
           touch-action="none"
         >
           {/* <MainSectionHeader reference={reference} /> */}
-          <Camera />
+          {/* <Camera /> */}
+          {/* <CameraLense /> */}
+          <CameraLenseWithoutStrap />
         </div>
       </div>
     </section>
