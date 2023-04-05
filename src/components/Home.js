@@ -9,6 +9,8 @@ import {
 } from "@react-three/drei";
 import ThreeFooter from "./footer/ThreeFooter";
 import FooterWithThree from "./threeJsModels/FooterWithThree";
+import { Link } from "react-scroll";
+
 const MainSection = React.lazy(() => import("./mainSection/MainSection"));
 const VideoPlayer = React.lazy(() => import("./videoPlayer/VideoPlayer"));
 const ContactService = React.lazy(() =>
@@ -57,7 +59,10 @@ const Home = () => {
             <Scroll> */}
       {/* <VideoPlayer /> */}
       {/* <NameCarousel active={true} /> */}
-      <VideoPlayer />
+      <Link to="elementId" smooth={true} duration={500}>
+        <VideoPlayer />
+      </Link>
+
       <SecondSection active={true} />
       <Services reference={services} />
       <SecondSection active={true} />

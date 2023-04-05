@@ -47,7 +47,7 @@ const MainSection = ({
           }}
           touch-action="none"
         >
-          <MainSectionHeader reference={reference} />
+          {/* <MainSectionHeader reference={reference} /> */}
           <Camera />
         </div>
       </div>

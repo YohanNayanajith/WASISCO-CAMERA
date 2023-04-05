@@ -16,6 +16,7 @@ import { easing } from "maath";
 import { useEffect } from "react";
 import * as THREE from "three";
 import { mobileAndTabletCheck } from "webgi";
+import { gsap } from "gsap";
 
 function Model({ ...props }) {
   const modelRef = useRef();
@@ -99,9 +100,46 @@ function Model({ ...props }) {
 }
 
 const Camera = () => {
+  const containerRef = useRef(null);
+  const modelRef = useRef(null);
+  let scale = 1;
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const model = modelRef.current;
+
+    const handleScroll = (e) => {
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? 0.1 : -0.1; // increase or decrease scale based on scroll direction
+      scale += delta;
+      // gsap.to(model, {
+      //   scale: scale,
+      //   duration: 0.3,
+      //   transformOrigin: "center center",
+      // });
+      if (scale >= 2) { // adjust the maximum zoom scale as needed
+        window.scrollBy({ top: window.innerHeight, left: 0, behavior: 'smooth' }); // scroll to the next section
+        scale = 2; // reset the scale
+      } else if (scale <= 1) { // adjust the minimum zoom scale as needed
+        scale = 1; // set the minimum scale
+      } else {
+        gsap.to(model, { scale: scale, duration: 0.3, transformOrigin: 'center center' }); // zoom the model
+      }
+    };
+
+    container.addEventListener("wheel", handleScroll);
+
+    return () => {
+      container.removeEventListener("wheel", handleScroll);
+    };
+  }, []);
   return (
-    <section className="wrapper" style={{ backgroundColor: "black", zIndex:10 }}>
-      <Canvas camera={{ fov: 70, position: [0, 0, 15] }}>
+    <section
+      className="wrapper"
+      style={{ backgroundColor: "black", zIndex: 10 }}
+      ref={containerRef}
+    >
+      <Canvas camera={{ fov: 70, position: [0, 0, 15] }} ref={modelRef}>
         <Suspense fallback={null}>
           <ambientLight />
           <directionalLight intensity={2} position={[0, 0, 50]} />
