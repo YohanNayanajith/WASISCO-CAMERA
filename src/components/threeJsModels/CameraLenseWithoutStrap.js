@@ -66,7 +66,7 @@ function Model({ ...props }) {
   return (
     <group {...props} dispose={null}>
       <group
-        position={[0, 0, 0]}
+        position={[0.33, -0.45, -0.82]}
         // rotation={[0, -Math.PI / 2, 0]}
         scale={isMobile ? 40 : 120}
       >
@@ -82,6 +82,7 @@ function Model({ ...props }) {
 const CameraLenseWithoutStrap = () => {
   const containerRef = useRef(null);
   const modelRef = useRef(null);
+  const contentRef = useRef(null);
   let scale = 1;
   let maximumScaleValue = 26;
   let minimumScaleValue = 1;
@@ -90,6 +91,16 @@ const CameraLenseWithoutStrap = () => {
   useEffect(() => {
     const container = containerRef.current;
     const model = modelRef.current;
+    const content = contentRef.current;
+
+    const textAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".text", // The element that triggers the animation
+        start: "top center", // The position of the trigger element when the animation starts
+        end: "bottom center", // The position of the trigger element when the animation ends
+        scrub: true, // Whether or not to scrub the animation
+      },
+    });
 
     const handleScroll = (e) => {
       e.preventDefault();
@@ -103,7 +114,23 @@ const CameraLenseWithoutStrap = () => {
       //   duration: 0.3,
       //   transformOrigin: "center center",
       // });
+      if(e.deltaY > 0){
+        textAnimation.to(content, {
+          opacity: 0,
+          // y: 100,
+          duration: 0.01,
+          ease: "expo.out",
+        });
+      }else if (scale <= minimumScaleValue) {
+        textAnimation.to(content, {
+          opacity: 1,
+          // y: 100,
+          duration: 0.01,
+          ease: "expo.out",
+        });
+      }
       if (scale >= maximumScaleValue) {
+        
         // adjust the maximum zoom scale as needed
         window.scrollBy({
           top: window.innerHeight,
@@ -119,6 +146,7 @@ const CameraLenseWithoutStrap = () => {
           duration: 2,
           ease: "expo.out",
         });
+        
       } else {
         gsap.to(model, {
           scale: scale,
@@ -126,6 +154,14 @@ const CameraLenseWithoutStrap = () => {
           transformOrigin: "center center",
           ease: "expo.out",
         }); // zoom the model
+        
+        // gsap.to(content, {
+        //   // scale: scale,
+        //   duration: 2,
+        //   transformOrigin: "center center",
+        //   ease: "expo.out",
+        // });
+        
       }
     };
 
@@ -141,10 +177,10 @@ const CameraLenseWithoutStrap = () => {
       style={{ backgroundColor: "black", zIndex: 10 }}
       ref={containerRef}
     >
-      <Canvas camera={{ fov: 70, position: [0, 0, 15] }} ref={modelRef}>
+      <Canvas camera={{ fov: 70, position: [0, 0, 15] }} ref={modelRef} >
         <Suspense fallback={null}>
-          <ScrollControls damping={1} pages={1}>
-            <Scroll>
+          {/* <ScrollControls damping={1}> */}
+            {/* <Scroll> */}
               <ambientLight />
               <directionalLight intensity={0.5} position={[0, 0, 50]} />
               <Environment preset="city" />
@@ -162,9 +198,9 @@ const CameraLenseWithoutStrap = () => {
                 enableRotate={false}
               />
               {/* <OrbitControls enablePan={true} enableZoom={false} enableRotate={false} /> */}
-            </Scroll>
-            <Scroll html>
-              <MainSectionHeader />
+            {/* </Scroll> */}
+            {/* <Scroll html> */}
+              
               {/* <h1
                 style={{
                   position: "absolute",
@@ -185,11 +221,12 @@ const CameraLenseWithoutStrap = () => {
               >
                 be
               </h1> */}
-            </Scroll>
-          </ScrollControls>
+            {/* </Scroll> */}
+          {/* </ScrollControls> */}
           <Preload />
         </Suspense>
       </Canvas>
+      <MainSectionHeader reference={contentRef} />
     </section>
   );
 };
