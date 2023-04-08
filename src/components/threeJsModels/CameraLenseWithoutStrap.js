@@ -142,6 +142,12 @@ const CameraLenseWithoutStrap = () => {
           left: 0,
           behavior: "smooth",
         }); // scroll to the next section
+      }else {
+        window.scrollBy({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        }); // scroll to the next section
       }
 
       if(scale >= 17 && scale<=28){
