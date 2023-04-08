@@ -29,6 +29,7 @@ body {
 
 body {
   overflow-x: hidden;
+  scrollbar-width: none;
   /* width: 100%; */
 }
 
