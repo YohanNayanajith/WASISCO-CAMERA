@@ -51,36 +51,41 @@ function Model({ ...props }) {
     // // Check if the mouse is within a certain distance from the model
     // if (distance < 2) {
     //   // Rotate the model based on the horizontal mouse movement
-    // group.current.rotation.y = (x * Math.PI) / 4;
+    group.current.rotation.y = (x * Math.PI) / 4;
     // }
   });
-  //   function handlePointerOver() {
-  //     setHovered(true);
-  //     materials["Material.001"].color.set("hotpink");
-  //     // materials["Material.001"].color.set("#3C0071");
-  //   }
+    function handlePointerOver() {
+      setHovered(true);
+      materials["Camera_01_lens_body"].color.set("hotpink");
+      // materials["Material.001"].color.set("#3C0071");
+    }
 
-  //   function handlePointerOut() {
-  //     setHovered(false);
-  //     materials["Material.001"].color.set("#902E8E");
-  //   }
+    function handlePointerOut() {
+      setHovered(false);
+      materials["Camera_01_lens_body"].color.set("#902E8E");
+    }
   return (
-    <group {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null}>
       <group
-        position={[0.33, -0.45, -0.82]}
+        position={[0, 0, 0]}
         // rotation={[0, -Math.PI / 2, 0]}
         scale={isMobile ? 80 : 140}
       >
         <mesh
           geometry={nodes.Mesh016.geometry}
           material={materials.Camera_01_lens_body}
+          material-roughness={1}
+          onPointerOver={handlePointerOver}
+          onPointerOut={handlePointerOut}
+          {...props}
+          dispose={null}
         />
       </group>
     </group>
   );
 }
 
-const CameraLenseWithoutStrap = () => {
+export function CameraLenseWithoutStrap() {
   const containerRef = useRef(null);
   const modelRef = useRef(null);
   const contentRef = useRef(null);
@@ -234,8 +239,8 @@ const CameraLenseWithoutStrap = () => {
   }, []);
   return (
     <section
-      className="wrapper"
-      style={{ backgroundColor: "black", zIndex: 10, position: "relative" }}
+      className="main-section-camera-3d"
+      style={{ zIndex: 10, position: "relative" }}
       ref={containerRef}
     >
       {showVideo && (
@@ -321,4 +326,4 @@ const CameraLenseWithoutStrap = () => {
   );
 };
 
-export default CameraLenseWithoutStrap;
+useGLTF.preload("/models/camera-lens-without-strap.glb");
