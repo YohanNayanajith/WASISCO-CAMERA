@@ -59,9 +59,9 @@ const Home = () => {
             <Scroll> */}
       {/* <VideoPlayer /> */}
       {/* <NameCarousel active={true} /> */}
-      <Link to="elementId" smooth={true} duration={500}>
+      {/* <Link to="elementId" smooth={true} duration={500}>
         <VideoPlayer />
-      </Link>
+      </Link> */}
 
       <SecondSection active={true} />
       <Services reference={services} />

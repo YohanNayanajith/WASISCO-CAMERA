@@ -15,19 +15,21 @@ const videoSrc = {
   ],
 };
 
-const VideoPlayer = () => {
+const VideoPlayer = ({reference}) => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
   const src = "https://www.youtube.com/embed/d-f1TTE6WZg?list=RD4g7wxrjWBoA";
   return (
-    <div className="background-main-color d-flex flex-column justify-content-center" id="elementId">
+    <div className="background-main-color d-flex flex-column justify-content-center" id="elementId" ref={reference}>
       <div
         style={{
           color: "white",
           // padding: "300px",
           position: "relative",
           paddingTop: "60px",
-          // backgroundColor:"blue"
+          backgroundColor:"blue",
+          height:"100vh",
+          width:"100vw"
         }}
       >
         <MDBContainer className="p-4">
