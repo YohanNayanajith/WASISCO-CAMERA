@@ -136,12 +136,35 @@ const CameraLenseWithoutStrap = () => {
         });
       }
 
-      if(scale >= maximumScaleValueForOpenNextSection){
+      if(scale >= maximumScaleValue){
         window.scrollBy({
           top: window.innerHeight,
           left: 0,
           behavior: "smooth",
         }); // scroll to the next section
+      }
+
+      if(scale >= 17 && scale<=28){
+        
+        setShowVideo(true);
+        // gsap.fromTo("#image", {scale: 0.5}, {duration: 1, scale: 3, ease: "expoScale(0.5, 3, power2.inOut)"});
+        gsap.to(video, {
+          scrollTrigger: {
+            trigger: ".video-player", 
+            start: "top center", // The position of the trigger element when the animation starts
+            end: "bottom center", // The position of the trigger element when the animation ends
+            scrub: true, // Whether or not to scrub the animation
+          },
+          scale: 2,
+          // xPercent: -50,
+          // yPercent: -50,
+          duration: 0.01,
+          ease: "power2.inOut",
+          onComplete: () => {
+            setShowVideo(true);
+            
+          },
+        });
       }
 
       if (scale >= maximumScaleValue) {
@@ -159,17 +182,7 @@ const CameraLenseWithoutStrap = () => {
         //     });
         //   },
         // });
-        gsap.to(video, {
-          scale: 2,
-          xPercent: -50,
-          yPercent: -50,
-          duration: 1,
-          ease: "power2.inOut",
-          onComplete: () => {
-            setShowVideo(true);
-            
-          },
-        });
+        
 
         scale = maximumScaleValue; // reset the scale
       } else if (scale <= minimumScaleValue) {
@@ -188,7 +201,7 @@ const CameraLenseWithoutStrap = () => {
           transformOrigin: "center center",
           ease: "expo.out",
         }); // zoom the model
-        setShowVideo(false);
+        // setShowVideo(true);
 
         gsap.to(video, {
           opacity: 0,
@@ -222,6 +235,7 @@ const CameraLenseWithoutStrap = () => {
       {showVideo && (
         <div
           className="video-player"
+          id="image"
           style={{
             position: "absolute",
             left: "50%",
