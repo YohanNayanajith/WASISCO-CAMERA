@@ -2,6 +2,8 @@ import React from "react";
 import "./SecondSection.css";
 import { isMobile } from "react-device-detect";
 import { motion } from "framer-motion";
+import ScrollReveal from 'scrollreveal';
+import { useEffect } from "react";
 
 const draw = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -19,6 +21,12 @@ const draw = {
 };
 
 const SecondSection = ({ active }) => {
+  useEffect(()=>{
+    ScrollReveal().reveal('.second-section', {
+      interval: 20,
+      reset: true
+    });
+  },[]);
   const imageSection = () => {
     return (
       <div className="container second-section-container">

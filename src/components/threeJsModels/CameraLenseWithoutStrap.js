@@ -29,7 +29,7 @@ function Model({ ...props }) {
   const group = useRef();
   const [hovered, setHovered] = useState(false);
   // const { nodes, materials } = useGLTF("/models/camera-without-scroll.glb");
-  const { nodes, materials } = useGLTF("/models/camera-lens-without-strap.glb");
+  const { nodes, materials } = useGLTF("/models/camera-lense-new.glb");
 
   useEffect(() => {
     // Set the initial color of the material
@@ -326,4 +326,4 @@ export function CameraLenseWithoutStrap() {
   );
 };
 
-useGLTF.preload("/models/camera-lens-without-strap.glb");
+useGLTF.preload("/models/camera-lense-new.glb");

@@ -30,6 +30,7 @@ body {
 body {
   overflow-x: hidden;
   overflow-y: scroll;
+  scroll-behavior: smooth;
   scrollbar-width: none;
   /* width: 100%; */
 }
@@ -60,3 +61,4 @@ code {
     opacity: 1;
   }
 }
+

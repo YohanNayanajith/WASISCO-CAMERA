@@ -24,3 +24,27 @@
 
   color: #c3c1c3;
 }
+
+.card-carousel-background {
+  background: hsla(272, 100%, 22%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(272, 100%, 22%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 16%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(272, 100%, 22%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 16%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(272, 100%, 22%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 16%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3C0071", endColorstr="#000000", GradientType=1 );
+}

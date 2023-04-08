@@ -43,8 +43,10 @@
 }
 .second-section-container-image {
   flex: 30%;
-  -webkit-animation: fadeIn 3s;
-  animation: fadeIn 3s;
+  /* -webkit-animation: fadeIn 3s;
+  animation: fadeIn 3s; */
+  position: relative;
+  overflow: hidden;
 }
 
 .second-section-container-image img {
@@ -54,10 +56,36 @@
   width: 50%;
 }
 
+
 .second-section-container-image img:hover {
-  animation: mymove2 2s;
+  /* animation: mymove2 2s; */
+  animation: rotate 5s linear infinite;
   animation-fill-mode: forwards;
   color: var(--light-purple);
+}
+
+@keyframes rotate {
+  from {
+    top: 0px;
+    /* border: var(--white) 2px; */
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  to {
+    top: 0px;
+    /* background-color: var(--light-purple); */
+    background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1678118944/WASISCO/mainSection/readmore-text_oaf8mq.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    color: var(--black);
+    /* background-color: #cccccc; */
+    border-radius: 50%;
+    opacity: 1;
+    /* border: 2px solid var(--white); */
+    /* width: 18%; */
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes mymove {
@@ -71,6 +99,27 @@
     background-color: var(--grey);
     color: var(--white);
     border-radius: 50%;
+  }
+}
+
+@keyframes mymove2 {
+  from {
+    top: 0px;
+    /* border: var(--white) 2px; */
+    border-radius: 50%;
+  }
+  to {
+    top: 0px;
+    /* background-color: var(--light-purple); */
+    background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1678118944/WASISCO/mainSection/readmore-text_oaf8mq.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    color: var(--black);
+    /* background-color: #cccccc; */
+    border-radius: 50%;
+    /* border: 2px solid var(--white); */
+    /* width: 18%; */
   }
 }
 
