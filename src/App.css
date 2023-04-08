@@ -52,6 +52,29 @@ section > div {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#902E8E", GradientType=1 );
 }
 
+.main-section-camera-3d {
+  background: hsla(0, 0%, 0%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(0, 0%, 0%, 1) 83%,
+    hsla(302, 52%, 37%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(0, 0%, 0%, 1) 83%,
+    hsla(302, 52%, 37%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(0, 0%, 0%, 1) 83%,
+    hsla(302, 52%, 37%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#912E8E", GradientType=1 );
+}
 
 /* .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin: 0;

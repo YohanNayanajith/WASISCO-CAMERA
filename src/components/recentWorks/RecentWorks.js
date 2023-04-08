@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./RecentWorks.css";
 import { recentWorkData } from "../../data/recentWorkData";
 import { motion } from "framer-motion";
+import ScrollReveal from 'scrollreveal';
 
 const RecentWorks = () => {
+  useEffect(()=>{
+    ScrollReveal().reveal('.recent-work-left', {
+      interval: 20,
+      reset: true
+    });
+    
+    ScrollReveal().reveal('.recent-work-right', {
+      interval: 20,
+      reset: true
+    });
+  },[]);
   const getParticularTags = (tag) => {
     return (
       <motion.div

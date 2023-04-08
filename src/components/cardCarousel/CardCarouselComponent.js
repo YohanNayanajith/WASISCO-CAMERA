@@ -3,7 +3,7 @@ import "./CardCarousel.css";
 
 const CardCarouselComponent = (props) => {
   return (
-    <div className="background-main-color">
+    <div>
       <div className="card-carousel-container">
         <div className="card-carousel-image">
           <img

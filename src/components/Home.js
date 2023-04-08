@@ -10,6 +10,7 @@ import {
 import ThreeFooter from "./footer/ThreeFooter";
 import FooterWithThree from "./threeJsModels/FooterWithThree";
 import { Link } from "react-scroll";
+import BackToTop from "./backToTop/BackToTop";
 
 const MainSection = React.lazy(() => import("./mainSection/MainSection"));
 const VideoPlayer = React.lazy(() => import("./videoPlayer/VideoPlayer"));
@@ -31,6 +32,7 @@ const Blogs = React.lazy(() => import("./blogs/Blogs"));
 const OurTeam = React.lazy(() => import("./ourTeam/OurTeam"));
 
 const Home = () => {
+  
   // Home
   const scrollToDiv = (ref) =>
     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
@@ -80,6 +82,7 @@ const Home = () => {
       <GetInTouch />
       {/* <Footer /> */}
       {/* <ThreeFooter /> */}
+      <BackToTop />
       <FooterWithThree />
       {/* </Scroll> */}
       {/* <Scroll html>

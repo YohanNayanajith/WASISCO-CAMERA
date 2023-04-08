@@ -6,6 +6,7 @@ import Gallery from "../gallery/Gallery";
 const Services = ({ reference }) => {
   return (
     <div className="background-main-color" ref={reference} >
+    {/* <div className="background-main-color-services" ref={reference} > */}
       <div
         style={{
           position: "relative",

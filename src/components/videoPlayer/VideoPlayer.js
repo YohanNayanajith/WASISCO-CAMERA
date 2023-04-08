@@ -49,8 +49,8 @@ const VideoPlayer = ({ reference }) => {
                     data-gtm-yt-inspected-2340190_699="true"
                     id="388567449"
                   ></iframe> */}
-                  <video autoPlay loop>
-                    <source src={process.env.PUBLIC_URL + '/videos/sample-video.mp4'} type="video/mp4" />
+                  <video controls autoPlay loop>
+                    <source src="../../videos/sample-video.mp4" type="video/mp4" />
                   </video>
                 </div>
               </MDBCol>

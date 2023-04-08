@@ -6,27 +6,6 @@
   position: relative;
   /* background-color:yellow; */
 
-  /* background: hsla(0, 0%, 0%, 1);
-
-  background: linear-gradient(
-    45deg,
-    hsla(0, 0%, 0%, 1) 83%,
-    hsla(302, 52%, 37%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    45deg,
-    hsla(0, 0%, 0%, 1) 83%,
-    hsla(302, 52%, 37%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    45deg,
-    hsla(0, 0%, 0%, 1) 83%,
-    hsla(302, 52%, 37%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#912E8E", GradientType=1 ); */
 }
 .main-section-header {
   font-style: normal;
