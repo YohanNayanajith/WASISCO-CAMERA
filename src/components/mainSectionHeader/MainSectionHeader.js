@@ -10,8 +10,9 @@ const MainSectionHeader = ({reference}) => {
         position: "absolute",
         top: 0,
         left: 0,
-        width: "100vw",
-        height: "100vh",
+        // width: "100vw",
+        // backgroundColor:"pink",
+        // height: "100vh",
       }}
       ref={reference}
     >

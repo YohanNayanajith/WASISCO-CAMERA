@@ -85,8 +85,8 @@ function Model({ ...props }) {
   );
 }
 
-export function CameraLenseWithoutStrap() {
-  const containerRef = useRef(null);
+export function CameraLenseWithoutStrap({containerRef}) {
+  // const containerRef = useRef(reference);
   const modelRef = useRef(null);
   const contentRef = useRef(null);
   const videoRef = useRef(null);
