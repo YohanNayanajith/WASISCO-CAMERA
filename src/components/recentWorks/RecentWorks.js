@@ -2,20 +2,21 @@ import React, { useEffect } from "react";
 import "./RecentWorks.css";
 import { recentWorkData } from "../../data/recentWorkData";
 import { motion } from "framer-motion";
-import ScrollReveal from 'scrollreveal';
+import ScrollReveal from "scrollreveal";
+import Cursor from "react-cursor-follow";
 
 const RecentWorks = () => {
-  useEffect(()=>{
-    ScrollReveal().reveal('.recent-work-left', {
+  useEffect(() => {
+    ScrollReveal().reveal(".recent-work-left", {
       interval: 20,
-      reset: true
+      reset: true,
     });
-    
-    ScrollReveal().reveal('.recent-work-right', {
+
+    ScrollReveal().reveal(".recent-work-right", {
       interval: 20,
-      reset: true
+      reset: true,
     });
-  },[]);
+  }, []);
   const getParticularTags = (tag) => {
     return (
       <motion.div
@@ -44,16 +45,29 @@ const RecentWorks = () => {
             return getParticularTags(tag);
           })}
         </div>
+        {/* <Cursor
+            hollow
+            color={"#c24040"}
+            // color={colors[i]}
+            duration={0.8}
+            size={100}
+            // custom={true}
+            className="cursor-follow-mouse"
+          /> */}
       </div>
     );
   };
 
   const getParticularImage = (imageUrl) => {
     return (
-      <motion.div className="recent-work-left" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <div className="recent-work-left-image">
-            <img src={imageUrl} alt="recent-work" />
-          </div>
+      <motion.div
+        className="recent-work-left"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <div className="recent-work-left-image">
+          <img src={imageUrl} alt="recent-work" />
+        </div>
       </motion.div>
     );
   };

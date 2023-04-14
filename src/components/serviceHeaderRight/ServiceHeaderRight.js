@@ -7,7 +7,8 @@ const ServiceHeaderRight = (props) => {
     <div>
       <div className="service-header-main-right">
         <div className="service-header-main-content-right">
-          <Typewriter
+          {props.header}
+          {/* <Typewriter
             options={{ autoStart: true, loop: true }}
             onInit={(typewriter) => {
               typewriter
@@ -16,7 +17,7 @@ const ServiceHeaderRight = (props) => {
                 .deleteAll()
                 .start();
             }}
-          />
+          /> */}
         </div>
         <div className="service-header-main-number-right">
           <img

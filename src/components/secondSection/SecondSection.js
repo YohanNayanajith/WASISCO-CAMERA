@@ -4,6 +4,8 @@ import { isMobile } from "react-device-detect";
 import { motion } from "framer-motion";
 import ScrollReveal from 'scrollreveal';
 import { useEffect } from "react";
+import MouseMove from "../mouseMove/MouseMove";
+import HoverButton from "../hoverButton/HoverButton";
 
 const draw = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -31,10 +33,12 @@ const SecondSection = ({ active }) => {
     return (
       <div className="container second-section-container">
         <div className="second-section-container-image">
-          <img
+          {/* <img
             src="https://res.cloudinary.com/midefulness/image/upload/v1677783910/WASISCO/secondSection/ellipseWithArrow_xhqwkl.png"
             alt="Eclipse"
-          />
+          /> */}
+          <HoverButton />
+          {/* <MouseMove /> */}
         </div>
         <div className="second-section-container-content">
           <div>

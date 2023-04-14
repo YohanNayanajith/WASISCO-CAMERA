@@ -52,7 +52,7 @@ const MainSection = ({
           {/* <MainSectionHeader reference={reference} /> */}
           {/* <Camera /> */}
           {/* <CameraLense /> */}
-          <CameraLenseWithoutStrap />
+          <CameraLenseWithoutStrap containerRef={reference} />
         </div>
       </div>
     </section>

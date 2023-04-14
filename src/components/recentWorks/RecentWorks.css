@@ -1,3 +1,12 @@
+.cursor-follow-mouse {
+  background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1681368251/WASISCO/secondSection/Group_18313_1_ajrgks.png");
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: red;
+}
+
 .recent-work-container {
   display: flex;
   flex-direction: row;
