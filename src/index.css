@@ -15,6 +15,12 @@
   --light-white: #FAF4FE;
   --white: #ffffff;
   --font-family: 'Montserrat';
+
+  --color-black: #000;
+  --color-dark: #222;
+  --color-white: #fff;
+  --circle-button-duration: 0.75s;
+  --size: 150px;
 }
 
 body {

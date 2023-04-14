@@ -1,0 +1,155 @@
+/* font-family: monospace, monospace; */
+
+.readmore-button-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.readmore-button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  color: white;
+}
+.readmore-button > span {
+  opacity: 0;
+}
+.readmore-button:after,
+.readmore-button:before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  bottom: auto;
+  left: 0;
+  right: auto;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  border-radius: 50%;
+}
+.readmore-button:before {
+  border: 1px solid var(--color-white);
+  transform: scale(0.99);
+}
+.readmore-button:after {
+  transition: transform var(--circle-button-duration);
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  transform: scale(0);
+  background-color: var(--color-white);
+}
+.readmore-button__outer {
+  height: 100%;
+  position: absolute;
+  bottom: auto;
+  left: 0;
+  right: auto;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+.readmore-button__text {
+  display: block;
+  position: relative;
+  width: 88%;
+  height: 88%;
+  opacity: 0;
+  transition: opacity calc(var(--circle-button-duration) / 2);
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  -webkit-animation-name: readmore-button-text-rotation;
+  animation-name: readmore-button-text-rotation;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@-webkit-keyframes readmore-button-text-rotation {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes readmore-button-text-rotation {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-1turn);
+  }
+}
+.readmore-button__ico,
+.readmore-button__text img,
+.readmore-button__text svg {
+  height: 100%;
+  position: absolute;
+  bottom: auto;
+  left: 0;
+  right: auto;
+  top: 0;
+  width: 100%;
+}
+.readmore-button__ico {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.readmore-button__ico img,
+.readmore-button__ico svg {
+  width: auto;
+}
+html:not(.v-mobile-device) .readmore-button:hover:after {
+  transform: scale(1);
+}
+html:not(.v-mobile-device) .readmore-button:hover .readmore-button__text {
+  opacity: 1;
+  transition: opacity var(--circle-button-duration);
+  transition-delay: calc(var(--circle-button-duration) / 2);
+  transition-timing-function: ease;
+}
+html:not(.v-mobile-device) .readmore-button.hover:after {
+  transform: scale(1);
+}
+html:not(.v-mobile-device) .readmore-button.hover .readmore-button__text {
+  opacity: 1;
+  transition: opacity var(--circle-button-duration);
+  transition-delay: calc(var(--circle-button-duration) / 2);
+  transition-timing-function: ease;
+}
+.readmore-button.angle-45 {
+  transform: rotate(45deg);
+}
+.readmore-button.angle-180 {
+  transform: rotate(180deg);
+}

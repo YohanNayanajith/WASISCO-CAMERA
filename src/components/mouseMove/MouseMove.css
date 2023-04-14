@@ -1,0 +1,46 @@
+.poly {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  background-color: aqua;
+}
+.poly__link {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 200px;
+  height: 200px;
+}
+.poly__link__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding: 0 25px;
+  display: table;
+  text-align: center;
+  /* border: solid 4px #bf990c; */
+  /* border-radius: 100%; */
+}
+.poly__link__container__wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
