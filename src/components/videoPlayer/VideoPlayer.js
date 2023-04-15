@@ -50,13 +50,17 @@ const VideoPlayer = ({ reference }) => {
                     id="388567449"
                   ></iframe> */}
                   <video controls autoPlay loop>
-                    <source src="../../videos/sample-video.mp4" type="video/mp4" />
+                    <source
+                      src="../../videos/sample-video.mp4"
+                      type="video/mp4"
+                    />
                   </video>
                 </div>
               </MDBCol>
             </MDBRow>
           </div>
         </MDBContainer>
+
         <div
           style={{
             position: "absolute",

@@ -4,6 +4,14 @@ import { recentWorkData } from "../../data/recentWorkData";
 import { motion } from "framer-motion";
 import ScrollReveal from "scrollreveal";
 import Cursor from "react-cursor-follow";
+import ReactHover, { Trigger, Hover } from "react-hover";
+import VideoButton from "../videoPlayer/VideoButton";
+
+const optionsCursorTrueWithMargin = {
+  followCursor: true,
+  shiftX: 0,
+  shiftY: 0,
+};
 
 const RecentWorks = () => {
   useEffect(() => {
@@ -74,19 +82,28 @@ const RecentWorks = () => {
 
   return (
     <div className="background-main-color ">
-      {recentWorkData.map((recentWork, index) => {
-        return recentWork.left ? (
-          <div key={recentWork.id} className="recent-work-container">
-            {getParticularImage(recentWork.imageUrl)}
-            {getParticularContent(recentWork)}
+      <ReactHover options={optionsCursorTrueWithMargin}>
+        <Trigger type="trigger">
+          <div className="trigger">
+            {recentWorkData.map((recentWork, index) => {
+              return recentWork.left ? (
+                <div key={recentWork.id} className="recent-work-container">
+                  {getParticularImage(recentWork.imageUrl)}
+                  {getParticularContent(recentWork)}
+                </div>
+              ) : (
+                <div key={recentWork.id} className="recent-work-container">
+                  {getParticularContent(recentWork)}
+                  {getParticularImage(recentWork.imageUrl)}
+                </div>
+              );
+            })}
           </div>
-        ) : (
-          <div key={recentWork.id} className="recent-work-container">
-            {getParticularContent(recentWork)}
-            {getParticularImage(recentWork.imageUrl)}
-          </div>
-        );
-      })}
+        </Trigger>
+        <Hover type="hover">
+          <VideoButton />
+        </Hover>
+      </ReactHover>
     </div>
   );
 };

@@ -36,8 +36,8 @@
   padding: 0 25px;
   display: table;
   text-align: center;
-  /* border: solid 4px #bf990c; */
-  /* border-radius: 100%; */
+  border: solid 4px #bf990c;
+  border-radius: 100%;
 }
 .poly__link__container__wrapper {
   display: table-cell;

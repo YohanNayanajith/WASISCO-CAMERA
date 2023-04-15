@@ -68,7 +68,7 @@ const Home = () => {
 
       <SecondSection active={true} />
       {/* <MouseMove /> */}
-      {/* <HoverButton /> */}
+      <HoverButton />
       <Services reference={services} />
       <SecondSection active={true} />
       <CardCarousel />

@@ -41,10 +41,15 @@ function Poly({ children }) {
         x: prev.x + (target.x - prev.x) * 0.1,
         y: prev.y + (target.y - prev.y) * 0.1,
       }));
-      TweenMax.set(polyRef.current.querySelector(".poly__link__container"), {
-        x: -current.x,
-        y: -current.y,
-      });
+      console.log(polyRef.current);
+      console.log(polyRef.current.querySelector);
+      console.log(polyRef.current.querySelector(".poly__link__container"));
+      if (polyRef.current && polyRef.current.querySelector) {
+        TweenMax.set(polyRef.current.querySelector(".poly__link__container"), {
+          x: -current.x,
+          y: -current.y,
+        });
+      }
       requestAnimationFrame(render);
     };
 
@@ -74,9 +79,10 @@ export default function MouseMove() {
       <Poly>
         <a href="#" className="poly__link">
           <div className="poly__link__container">
-            {/* <div className="poly__link__container__wrapper"> */}
-              <HoverButton />
-            {/* </div> */}
+            <div className="poly__link__container__wrapper">
+              {/* <HoverButton /> */}
+              Yohan
+            </div>
           </div>
         </a>
       </Poly>

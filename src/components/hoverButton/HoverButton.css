@@ -1,14 +1,36 @@
 /* font-family: monospace, monospace; */
 
+.hover-button.is-hovering {
+  animation: shake 0.4s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-4px, 0);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 .readmore-button-container {
   padding-top: 20px;
   padding-bottom: 20px;
   align-items: center;
 }
 
-svg:not(:root) {
+/* svg:not(:root) {
   overflow: hidden;
-}
+} */
 
 .readmore-button {
   background: transparent;
