@@ -11,7 +11,11 @@ import ThreeFooter from "./footer/ThreeFooter";
 import FooterWithThree from "./threeJsModels/FooterWithThree";
 import { Link } from "react-scroll";
 import BackToTop from "./backToTop/BackToTop";
-import { firstContent, secondContent, thirdContent } from "../data/secondSectionData";
+import {
+  firstContent,
+  secondContent,
+  thirdContent,
+} from "../data/secondSectionData";
 import { aboutContentData } from "../data/aboutContent";
 import LogoCarousel from "./logoCarousel/LogoCarousel";
 
@@ -42,6 +46,50 @@ const Home = () => {
   const blogs = useRef();
   const about = useRef();
   const contact = useRef();
+
+  // const [scrollTimeout, setScrollTimeout] = useState(null);
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
+  // const handleScroll = () => {
+  //   clearTimeout(scrollTimeout);
+  //   setScrollTimeout(
+  //     setTimeout(() => {
+  //       const currentPosition = window.pageYOffset;
+  //       const targetPosition =
+  //         Math.round(currentPosition / window.innerHeight) * window.innerHeight;
+  //       const distance = targetPosition - currentPosition;
+  //       const duration = Math.abs(distance) / 3;
+  //       const startTime = performance.now();
+
+  //       function animateScroll(currentTime) {
+  //         const elapsedTime = currentTime - startTime;
+  //         const position = easeInOutCubic(
+  //           elapsedTime,
+  //           currentPosition,
+  //           distance,
+  //           duration
+  //         );
+
+  //         window.scrollTo(0, position);
+
+  //         if (elapsedTime < duration) {
+  //           requestAnimationFrame(animateScroll);
+  //         }
+  //       }
+
+  //       requestAnimationFrame(animateScroll);
+  //     }, 100)
+  //   );
+  // };
+
+  // function easeInOutCubic(t, b, c, d) {
+  //   if ((t /= d / 2) < 1) return (c / 2) * t * t * t + b;
+  //   return (c / 2) * ((t -= 2) * t * t + 2) + b;
+  // }
 
   return (
     <div>

@@ -33,10 +33,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   overflow-y: scroll;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scrollbar-width: none;
   /* width: 100%; */
 }

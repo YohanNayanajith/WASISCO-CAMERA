@@ -52,7 +52,7 @@ function App() {
         </div>
       ) : (
         <>
-          {/* <AnimatedCursor
+          <AnimatedCursor
             color="255,255,255"
             innerSize={8}
             outerSize={35}
@@ -63,7 +63,7 @@ function App() {
               border: "3px solid #fff",
               zIndex:9999
             }}
-          /> */}
+          />
           <div
             //   className="background-main-color-with-height"
             onMouseMove={handleMouseMove}
