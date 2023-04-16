@@ -1,14 +1,54 @@
 /* font-family: monospace, monospace; */
 
+.hover-button.is-hovering {
+  animation: shake 1s ease-in-out infinite;
+}
+
+@keyframes shake {
+  /* 0% {
+    transform: translate(0, 0);
+  } */
+  10% {
+    transform: translate(-8px, 0px);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+  }
+  30% {
+    transform: translate(0px, 8px);
+  }
+  40% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(8px, 0px);
+  }
+  60% {
+    transform: translate(5px, -5px);
+  }
+  70% {
+    transform: translate(0, -8px);
+  }
+  80% {
+    transform: translate(-5px, -5px);
+  }
+  90% {
+    transform: translate(0, 8px);
+  }
+  /* 100% {
+    transform: translate(0, 0);
+  } */
+}
+
 .readmore-button-container {
   padding-top: 20px;
   padding-bottom: 20px;
   align-items: center;
 }
 
-svg:not(:root) {
+/* svg:not(:root) {
   overflow: hidden;
-}
+} */
 
 .readmore-button {
   background: transparent;

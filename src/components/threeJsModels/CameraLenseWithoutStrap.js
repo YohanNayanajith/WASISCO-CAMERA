@@ -253,6 +253,7 @@ export function CameraLenseWithoutStrap({containerRef}) {
             top: "50%",
             transform: "translate(-50%, -50%)",
             zIndex: 100,
+            backgroundColor:"pink"
           }}
         >
           {/* <video ref={videoRef} controls>
