@@ -81,7 +81,7 @@ const RecentWorks = () => {
   };
 
   return (
-    <div className="background-main-color ">
+    <div className="background-main-color " style={{cursor: "pointer"}}>
       <ReactHover options={optionsCursorTrueWithMargin}>
         <Trigger type="trigger">
           <div className="trigger">

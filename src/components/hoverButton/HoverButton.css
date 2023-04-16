@@ -1,25 +1,43 @@
 /* font-family: monospace, monospace; */
 
 .hover-button.is-hovering {
-  animation: shake 0.4s ease-in-out infinite;
+  animation: shake 1s ease-in-out infinite;
 }
 
 @keyframes shake {
-  0% {
+  /* 0% {
     transform: translate(0, 0);
+  } */
+  10% {
+    transform: translate(-8px, 0px);
   }
-  25% {
-    transform: translate(-4px, 0);
+  20% {
+    transform: translate(-5px, 5px);
+  }
+  30% {
+    transform: translate(0px, 8px);
+  }
+  40% {
+    transform: translate(5px, 5px);
   }
   50% {
-    transform: translate(0, 0);
+    transform: translate(8px, 0px);
   }
-  75% {
-    transform: translate(0, 0);
+  60% {
+    transform: translate(5px, -5px);
   }
-  100% {
-    transform: translate(0, 0);
+  70% {
+    transform: translate(0, -8px);
   }
+  80% {
+    transform: translate(-5px, -5px);
+  }
+  90% {
+    transform: translate(0, 8px);
+  }
+  /* 100% {
+    transform: translate(0, 0);
+  } */
 }
 
 .readmore-button-container {

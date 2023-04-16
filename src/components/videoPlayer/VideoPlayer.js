@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./VideoPlayer.css";
 import { MDBFooter, MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import NameCarousel from "../nameCarousel/NameCarousel";
+import { motion } from "framer-motion";
 // import Plyr from "plyr-react";
 // import "plyr-react/dist/plyr.css";
 
@@ -16,9 +17,30 @@ const videoSrc = {
 };
 
 const VideoPlayer = ({ reference }) => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
-  const src = "https://www.youtube.com/embed/d-f1TTE6WZg?list=RD4g7wxrjWBoA";
+  const [isHovered, setIsHovered] = useState(false);
+  const [prevX, setPrevX] = useState(null);
+
+  const handleMouseOver = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleMouseMove = (event) => {
+    const currX = event.clientX;
+    if (prevX && currX !== prevX) {
+      const direction = currX > prevX ? "right" : "left";
+      const className = direction === "right" ? "rotate" : "rotate-backward";
+      event.target.classList.add(className);
+      setTimeout(() => {
+        event.target.classList.remove(className);
+      }, 100);
+    }
+    setPrevX(currX);
+  };
+
   return (
     <div
       className="background-main-color d-flex flex-column justify-content-center"
@@ -37,7 +59,8 @@ const VideoPlayer = ({ reference }) => {
         }}
       >
         <MDBContainer className="p-4">
-          <div className="">
+          {/* <div className={`box ${isHovered ? "rotate" : ""}`}> */}
+          <div class>
             <MDBRow className="d-flex align-items-center justify-content-center">
               <MDBCol lg="9">
                 <div className="ratio ratio-16x9">
@@ -72,6 +95,28 @@ const VideoPlayer = ({ reference }) => {
           }}
         >
           <NameCarousel active={true} />
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "100%",
+            height: "100%",
+          }}
+          // onMouseOver={handleMouseOver}
+          // onMouseLeave={handleMouseLeave}
+          // onMouseMove={handleMouseMove}
+          className="rotate-3d"
+        >
+          <div className="example-container">
+            <a href="#" style={{ textDecoration: "none", color: "white" }}>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+                <div className="example-container">Full Video</div>
+              </motion.div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
