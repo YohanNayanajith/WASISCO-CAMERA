@@ -10,10 +10,10 @@
 .main-section-header {
   font-style: normal;
   font-weight: 700;
-  font-size: 3em;
-  line-height: 60px;
+  font-size: 4em;
+  line-height: 70px;
   letter-spacing: 0.09em;
-  padding: 0 100px 30px;
+  padding: 0 100px 50px;
   color: #faf4fe;
   -webkit-animation: fadeIn 3s;
   animation: fadeIn 3s;

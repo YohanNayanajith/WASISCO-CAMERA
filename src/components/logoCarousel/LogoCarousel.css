@@ -49,6 +49,13 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3C0071", endColorstr="#000000", GradientType=1 );
 }
 
-.card-carousel-image img {
+/* .logo-carousel-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: "pink";
+} */
+
+.logo-carousel-image img {
   height: 100px;
 }
