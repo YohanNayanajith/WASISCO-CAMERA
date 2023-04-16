@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./HoverButton.css";
 
-const HoverButton = () => {
+const HoverButton = ({direction}) => {
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () => {
@@ -11,7 +11,7 @@ const HoverButton = () => {
   const handleMouseLeave = () => {
     setIsHovering(false);
   };
-  
+
   return (
     // <div style={{ height: "100vh", width: "100vw", backgroundColor:"black" }}>
     <div
@@ -22,7 +22,7 @@ const HoverButton = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: direction,
           // backgroundColor: "pink",
         }}
         className="readmore-button-container"

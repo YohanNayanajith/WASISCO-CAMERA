@@ -3,7 +3,6 @@ import "./RecentWorks.css";
 import { recentWorkData } from "../../data/recentWorkData";
 import { motion } from "framer-motion";
 import ScrollReveal from "scrollreveal";
-import Cursor from "react-cursor-follow";
 import ReactHover, { Trigger, Hover } from "react-hover";
 import VideoButton from "../videoPlayer/VideoButton";
 
@@ -53,15 +52,6 @@ const RecentWorks = () => {
             return getParticularTags(tag);
           })}
         </div>
-        {/* <Cursor
-            hollow
-            color={"#c24040"}
-            // color={colors[i]}
-            duration={0.8}
-            size={100}
-            // custom={true}
-            className="cursor-follow-mouse"
-          /> */}
       </div>
     );
   };
