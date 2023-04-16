@@ -1,0 +1,54 @@
+.card-carousel-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  padding: 0 60px 80px;
+}
+
+.card-carousel-header {
+  font-size: 44px;
+  line-height: 54px;
+  padding: 10px 0;
+  /* identical to box height */
+
+  letter-spacing: 0.09em;
+
+  color: #faf4fe;
+}
+.card-carousel-number {
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.09em;
+
+  color: #c3c1c3;
+}
+
+.card-carousel-background {
+  background: hsla(272, 100%, 22%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(272, 100%, 22%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 16%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(272, 100%, 22%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 16%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(272, 100%, 22%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 16%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3C0071", endColorstr="#000000", GradientType=1 );
+}
+
+.card-carousel-image img {
+  height: 100px;
+}

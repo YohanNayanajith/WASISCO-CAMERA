@@ -84,6 +84,11 @@
   padding: 10px;
 }
 
+.recent-work-left-image img {
+  /* width: 573px; */
+  height: 400px;
+}
+
 /* mobile view */
 
 @media (max-width: 450px) {

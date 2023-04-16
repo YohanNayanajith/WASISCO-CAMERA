@@ -9,7 +9,7 @@ const GetInTouch = ({ reference }) => {
       <div className="get-in-touch-container">
         <div className="get-in-touch-left">
           <img
-            src="https://res.cloudinary.com/midefulness/image/upload/v1678096233/WASISCO/getInTouch/Black_eygvna.png"
+            src="https://res.cloudinary.com/midefulness/image/upload/v1681657176/WASISCO/getInTouch/Place_your_Design_1_ddbuy3.png"
             alt="video"
           />
         </div>

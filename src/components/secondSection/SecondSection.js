@@ -2,7 +2,7 @@ import React from "react";
 import "./SecondSection.css";
 import { isMobile } from "react-device-detect";
 import { motion } from "framer-motion";
-import ScrollReveal from 'scrollreveal';
+import ScrollReveal from "scrollreveal";
 import { useEffect } from "react";
 import MouseMove from "../mouseMove/MouseMove";
 import HoverButton from "../hoverButton/HoverButton";
@@ -22,35 +22,26 @@ const draw = {
   },
 };
 
-const SecondSection = ({ active }) => {
-  useEffect(()=>{
-    ScrollReveal().reveal('.second-section', {
+const SecondSection = ({ active, data }) => {
+  useEffect(() => {
+    ScrollReveal().reveal(".second-section", {
       interval: 20,
-      reset: true
+      reset: true,
     });
-  },[]);
+  }, []);
   const imageSection = () => {
     return (
       <div className="container second-section-container">
         <div className="second-section-container-image">
-          {/* <img
-            src="https://res.cloudinary.com/midefulness/image/upload/v1677783910/WASISCO/secondSection/ellipseWithArrow_xhqwkl.png"
-            alt="Eclipse"
-          /> */}
           <HoverButton direction="center" />
-          {/* <MouseMove /> */}
         </div>
         <div className="second-section-container-content">
-          <div>
-            With a background in design, We work closely with design focused
-            teams to build websites and micro-sites for companies and
-            individuals. we have years of experience working and collaborating
-            on freelance works and managing all kind of projects.
-          </div>
-          <div style={{ paddingTop: "10px" }}>
-            With our experience in Product Designing, we solve product problems
-            and build appealing usable web experiences.
-          </div>
+          <div>{data.firstLayer}</div>
+          {data.secondLayer ? (
+            <div style={{ paddingTop: "10px" }}>{data.secondLayer}</div>
+          ) : (
+            <></>
+          )}
           {/* <motion.div>
             <motion.svg
               width="600"
@@ -78,8 +69,7 @@ const SecondSection = ({ active }) => {
     return (
       <div className="container second-section-header">
         <div className="justify-content-center second-section-container-second">
-          Every project made by wasisco team is created at the intersection
-          between design and technology, making the future — today
+          {data.header}
         </div>
       </div>
     );
@@ -108,7 +98,9 @@ const SecondSection = ({ active }) => {
               {imageSection()}
             </div>
           ) : (
-            <div className="second-section" style={{paddingTop:"80px"}}>{imageSection()}</div>
+            <div className="second-section" style={{ paddingTop: "80px" }}>
+              {imageSection()}
+            </div>
           )}
         </div>
       )}
