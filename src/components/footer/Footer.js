@@ -6,39 +6,38 @@ const Footer = ({ reference }) => {
     <div ref={reference} className="background-main-color">
       <div className="footer-container">
         <div className="footer-address1">
-          Heroes from Ukraine <br />
-          Main Office
-          <br />
-          Dnipro, 49000
-          <br />
-          <a href="https://advanced.team/">hello@advanced.team</a>
+          WASISCO FOOD MARKETING <br />
+          VIA AMADEO MODIGLIANI 73 <br />
+          50142 <br />
+          FIRENZE <br />
+          ITALY <br />
+          <a href="mailto:INFO@WASISCO.COM">INFO@WASISCO.COM</a>
         </div>
         <div className="footer-address2">
-          Heroes from Ukraine <br />
-          Main Office
-          <br />
-          Dnipro, 49000
-          <br />
-          <a href="https://advanced.team/">hello@advanced.team</a>
+          WASISCO GLOBAL SOLUTIONS <br />
+          GEDARA KITTUWA <br />
+          PALLEHA PATHTHE <br />
+          COLOMBO <br />
+          SRI LANKA <br />
+          <a href="mailto:INFO@WASISCO.COM">INFO@WASISCO.COM</a>
         </div>
         <div className="footer-social-media">
-          <a href="#">Facebook</a>
+          <a href="#">FACEBOOK</a>
           <br />
-          <a href="#">Instagram</a>
+          <a href="#">INSTAGRAM</a>
           <br />
-          <a href="#">Dribble</a>
+          <a href="#">TIKTOK</a>
           <br />
-          <a href="#">Behance</a>
+          <a href="#">LINKEDIN</a>
         </div>
         <div className="footer-address3">
           Business inquiries
           <br />
-          <a href="https://advanced.team/">hello@advanced.team</a>
+          <a href="mailto:INFO@WASISCO.COM">INFO@WASISCO.COM</a>
           <br />
           be advanced
         </div>
       </div>
-      
     </div>
   );
 };
