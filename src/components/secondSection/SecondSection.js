@@ -37,7 +37,7 @@ const SecondSection = ({ active }) => {
             src="https://res.cloudinary.com/midefulness/image/upload/v1677783910/WASISCO/secondSection/ellipseWithArrow_xhqwkl.png"
             alt="Eclipse"
           /> */}
-          <HoverButton />
+          <HoverButton direction="center" />
           {/* <MouseMove /> */}
         </div>
         <div className="second-section-container-content">

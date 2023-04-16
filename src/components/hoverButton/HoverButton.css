@@ -8,7 +8,8 @@
   /* 0% {
     transform: translate(0, 0);
   } */
-  10% {
+  
+  0% {
     transform: translate(-8px, 0px);
   }
   20% {
@@ -33,7 +34,10 @@
     transform: translate(-5px, -5px);
   }
   90% {
-    transform: translate(0, 8px);
+    transform: translate(-8px, 0);
+  }
+  100% {
+    transform: translate(-8px, 0);
   }
   /* 100% {
     transform: translate(0, 0);

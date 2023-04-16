@@ -1,6 +1,7 @@
 import React from "react";
 import "./GetInTouch.css";
 import HoverArrowImage from "../hoverArrowImage/HoverArrowImage";
+import HoverButton from "../hoverButton/HoverButton";
 
 const GetInTouch = ({ reference }) => {
   return (
@@ -22,7 +23,8 @@ const GetInTouch = ({ reference }) => {
             emotional solution,
           </div>
           <div className="get-in-touch-right-arrow-image">
-            <HoverArrowImage />
+            {/* <HoverArrowImage /> */}
+            <HoverButton direction={"left"} />
           </div>
         </div>
       </div>
