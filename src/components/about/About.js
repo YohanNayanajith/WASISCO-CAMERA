@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./About.css";
 import { isTablet } from "react-device-detect";
 
-const About = () => {
+const About = ({ data }) => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
   console.log(width);
@@ -41,10 +41,7 @@ const About = () => {
           alt="Background Ball"
         />
       </div>
-      <div className="about-content">
-        Every project made by wasisco team is created at the intersection
-        between design and technology, making the future — today
-      </div>
+      <div className="about-content">{data}</div>
     </div>
   );
 };

@@ -26,6 +26,11 @@
   text-align: left;
 }
 
+.gallery-card-component-container img {
+  height: 452px;
+  width: 100%;
+}
+
 @media (max-width: 1400px) {
   .gallery-card-component-content {
     /* font-size: 60px;

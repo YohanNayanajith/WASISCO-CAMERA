@@ -11,11 +11,11 @@ import ThreeFooter from "./footer/ThreeFooter";
 import FooterWithThree from "./threeJsModels/FooterWithThree";
 import { Link } from "react-scroll";
 import BackToTop from "./backToTop/BackToTop";
-import MouseMove from "./mouseMove/MouseMove";
-import HoverButton from "./hoverButton/HoverButton";
+import { firstContent, secondContent, thirdContent } from "../data/secondSectionData";
+import { aboutContentData } from "../data/aboutContent";
+import LogoCarousel from "./logoCarousel/LogoCarousel";
 
 const MainSection = React.lazy(() => import("./mainSection/MainSection"));
-const VideoPlayer = React.lazy(() => import("./videoPlayer/VideoPlayer"));
 const ContactService = React.lazy(() =>
   import("./contactService/ContactService")
 );
@@ -28,7 +28,6 @@ const RecentWorksService = React.lazy(() =>
 );
 const HandShake = React.lazy(() => import("./handShake/HandShake"));
 const GetInTouch = React.lazy(() => import("./getInTouch/GetInTouch"));
-const Footer = React.lazy(() => import("./footer/Footer"));
 const AboutUs = React.lazy(() => import("./aboutUs/AboutUs"));
 const Blogs = React.lazy(() => import("./blogs/Blogs"));
 const OurTeam = React.lazy(() => import("./ourTeam/OurTeam"));
@@ -66,20 +65,21 @@ const Home = () => {
         <VideoPlayer />
       </Link> */}
 
-      <SecondSection active={true} />
+      <SecondSection active={true} data={firstContent} />
       {/* <MouseMove /> */}
       {/* <HoverButton /> */}
       <Services reference={services} />
-      <SecondSection active={true} />
+      <SecondSection active={true} data={secondContent} />
       <CardCarousel />
       <RecentWorksService reference={recent} />
-      <NameCarousel active={false} />
+      {/* <NameCarousel active={false} /> */}
+      <LogoCarousel />
       <HandShake />
       <Blogs reference={blogs} />
-      <AboutUs reference={about} />
+      <AboutUs reference={about} data={aboutContentData} />
       {/* our team */}
       <OurTeam />
-      <SecondSection active={false} />
+      <SecondSection active={false} data={thirdContent} />
       <ContactService reference={contact} />
 
       <GetInTouch />

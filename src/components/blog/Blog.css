@@ -14,4 +14,6 @@
 .swiper-slide img {
   display: block;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }

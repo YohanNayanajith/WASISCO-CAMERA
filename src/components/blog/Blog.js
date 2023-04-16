@@ -8,6 +8,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import "./Blog.css";
+import { imageData } from "../../data/blogImages";
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
@@ -29,39 +30,39 @@ export default function Blog() {
           slideShadows: true,
         }}
         autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-          }}
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
         pagination={false}
         modules={[Autoplay, EffectCoverflow, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img src={imageData[0]} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <img src={imageData[1]} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <img src={imageData[2]} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <img src={imageData[0]} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          <img src={imageData[1]} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          <img src={imageData[2]} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          <img src={imageData[0]} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          <img src={imageData[1]} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          <img src={imageData[2]} />
         </SwiperSlide>
       </Swiper>
     </>
