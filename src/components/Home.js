@@ -18,8 +18,8 @@ import {
 } from "../data/secondSectionData";
 import { aboutContentData } from "../data/aboutContent";
 import LogoCarousel from "./logoCarousel/LogoCarousel";
+import MainSection from "./mainSection/MainSection";
 
-const MainSection = React.lazy(() => import("./mainSection/MainSection"));
 const ContactService = React.lazy(() =>
   import("./contactService/ContactService")
 );
