@@ -15,7 +15,7 @@ const LogoCarousel = () => {
         >
           <Marquee
             gradient={false}
-            speed={100}
+            speed={70}
             pauseOnHover={false}
             pauseOnClick={false}
             delay={0}
